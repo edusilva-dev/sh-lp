@@ -71,7 +71,7 @@ export const CardsCarousel: FC<CardsCarouselProps> = ({ reviews }) => {
 					</Stack>
 				))}
 			</Stack>
-			<Stack direction="row" alignSelf="flex-end" gap={4}>
+			<Stack direction="row" alignSelf={[ 'flex-start', 'flex-end']} gap={4}>
 				<Stack
 					onClick={() => emblaApi?.scrollPrev()}
 					alignItems="center"
