@@ -17,14 +17,15 @@ export const theme = createTheme({
 			main: '#4402FF'
 		},
 		secondary: {
-			main: '#1E2E3A'
+			main: '#B694FF'
 		},
 		text: {
 			active: '#4402FF'
 		},
 		background: {
 			paper: '#F3F5F7'
-		}
+		},
+		divider: '#6C8190'
 	},
 	typography: {
 		fontFamily: '\'Ubuntu\', sans-serif'
