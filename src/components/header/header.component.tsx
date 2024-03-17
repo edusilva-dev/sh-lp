@@ -1,6 +1,6 @@
 import { FC, useState } from 'react';
-import { ButtonsContainer, HeaderContainer, LoginButton, MenuIcon, RegisterButton } from './header.styles';
-import { Box, Drawer } from '@mui/material';
+import { ButtonsContainer, HeaderContainer, MenuIcon } from './header.styles';
+import { Box, Button, Drawer } from '@mui/material';
 
 import { SkillHunterLogo } from '@/assets/logos/skill-hunter.logo';
 
@@ -24,8 +24,8 @@ export const Header: FC = () => {
 			</Box>
 
 			<ButtonsContainer>
-				<RegisterButton variant='outlined' color={'inherit'}>Cadastre-se</RegisterButton>
-				<LoginButton>Entre</LoginButton>
+				<Button variant='outlined' color='secondary'>Cadastre-se</Button>
+				<Button variant='contained' color='secondary'>Entre</Button>
 			</ButtonsContainer>
 		</HeaderContainer>
 	);

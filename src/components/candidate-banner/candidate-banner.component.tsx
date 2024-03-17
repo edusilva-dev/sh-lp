@@ -22,7 +22,7 @@ export const CandidateBanner: FC = () => {
 				direction={['column', 'row']}
 				justifyContent="center"
 				alignItems="center"
-				gap="48px"
+				gap={6}
 			>
 				<Box
 					component="img"
