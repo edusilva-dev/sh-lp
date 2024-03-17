@@ -78,26 +78,27 @@ export const ReviewsBanner: FC = () => {
 						alignSelf: 'center',
 					})}
 				>
-					<Stack flex="1" {...(!isMobile && { p: 6 })}>
-						<Stack flex="1" justifyContent="space-between">
-							<Stack gap={isMobile ? 3 : 6}>
-								<Typography variant={isMobile ? 'h2' : 'h1'}>
-									Dê o próximo passo na sua carreira
-								</Typography>
-								<Typography variant={isMobile ? 'h3' : 'h2'} fontWeight={400}>
-									Junte-se a milhares de talentos e explore o mercado com vagas
-									sob medida para sua carreira
-								</Typography>
-							</Stack>
-							{!isMobile ? <SignInButtons /> : null}
+					<Stack flex="1" justifyContent="space-between">
+						<Stack gap={isMobile ? 3 : 6}>
+							<Typography variant={isMobile ? 'h2' : 'h1'}>
+								Dê o próximo passo na sua carreira
+							</Typography>
+							<Typography variant={isMobile ? 'h3' : 'h2'} fontWeight={400}>
+								Junte-se a milhares de talentos e explore o mercado com vagas
+								sob medida para sua carreira
+							</Typography>
 						</Stack>
+						{!isMobile ? <SignInButtons /> : null}
 					</Stack>
 					<Stack gap={6}>
 						<Box
-							sx={{
+							sx={(theme) => ({
 								flex: '1',
 								borderRadius: 2,
-							}}
+								[theme.breakpoints.up('lg')]: {
+									maxWidth: '500px',
+								},
+							})}
 							component="img"
 							src={reviewsBannerPhoto}
 						/>
