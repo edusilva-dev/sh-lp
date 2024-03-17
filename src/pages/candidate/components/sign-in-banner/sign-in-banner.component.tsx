@@ -42,7 +42,7 @@ export const SignInBanner: FC = () => (
 							gap={0.5}
 						>
 							Já possui uma conta?
-							<Link href="#" fontWeight={500}>
+							<Link href="#" fontWeight={500} sx={{ textDecoration: 'none' }}>
 								Entre
 							</Link>
 						</Typography>

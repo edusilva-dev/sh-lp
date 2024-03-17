@@ -5,7 +5,6 @@ import { Tabs } from './components/tabs';
 import { Candidate } from './pages/candidate';
 import { Recruiter } from './pages/recruiter';
 import { Footer } from './components/footer';
-import { Partners } from './components/partners';
 
 export const App = () => {
 	return (
@@ -22,8 +21,6 @@ export const App = () => {
 					</TabPanel>
 				</Tabs>
 			</main>
-
-			<Partners />
 			<Footer />
 		</>
 	);
