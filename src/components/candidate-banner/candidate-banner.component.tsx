@@ -25,19 +25,20 @@ export const CandidateBanner: FC = () => {
 				gap="48px"
 			>
 				<Box
-					sx={(theme) => ({
-						width: '100%',
-						[theme.breakpoints.down('sm')]: {
-							maxHeight: '315.55px',
-							height: '600px',
-						},
-						[theme.breakpoints.up('sm')]: {
-							width: '656px',
-							maxHeight: '600px',
-						},
-					})}
 					component="img"
 					src={bannerPath}
+					sx={(theme) => ({
+						width: '100%',
+						[theme.breakpoints.up('sm')]: {
+							maxWidth: '200px',
+						},
+						[theme.breakpoints.up('md')]: {
+							maxWidth: '300px',
+						},
+						[theme.breakpoints.up('lg')]: {
+							maxWidth: '600px',
+						},
+					})}
 				/>
 				<Stack gap={['48px', '110px']}>
 					<Stack gap="24px">
@@ -73,10 +74,8 @@ export const CandidateBanner: FC = () => {
 							gap="16px"
 							component="ul"
 							sx={(theme) => ({
-								marginX: '-25px',
-								'>li::marker': {
-									color: theme.palette.common.white,
-								},
+								marginLeft: '-25px',
+								color: theme.palette.common.white,
 							})}
 						>
 							<Box component="li">
