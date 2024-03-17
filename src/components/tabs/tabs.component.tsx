@@ -1,26 +1,17 @@
-import { FC, useEffect, useState } from 'react';
-import { TabsContainer } from './tabs.styles';
-import { Tab } from '../tab';
+import { TabContext, TabList } from '@mui/lab';
+import { Tab } from '@mui/material';
+import { FC, PropsWithChildren, useState } from 'react';
 
-export const Tabs: FC = () => {
+export const Tabs: FC<PropsWithChildren> = ({ children }) => {
 	const [activeTab, setActiveTab] = useState<string>('recruiter');
 
-	useEffect(() => {
-		console.log(activeTab);
-	}, [activeTab]);
-
 	return (
-		<TabsContainer>
-			<Tab 
-				label='Sou candidato' 
-				isActive={activeTab === 'candidate'} 
-				onClick={() => setActiveTab('candidate')} 
-			/>
-			<Tab 
-				label='Sou recrutador'
-				isActive={activeTab === 'recruiter'}
-				onClick={() => setActiveTab('recruiter')} 
-			/>
-		</TabsContainer>
+		<TabContext value={activeTab}>
+			<TabList onChange={(_, value) => setActiveTab(value)} variant="fullWidth">
+				<Tab label="Sou candidato" value="candidate" />
+				<Tab label="Sou recrutador" value="recruiter" />
+			</TabList>
+			{children}
+		</TabContext>
 	);
 };

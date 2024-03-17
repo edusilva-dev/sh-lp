@@ -1,9 +1,9 @@
-import { createTheme } from '@mui/material';
+import { createTheme, tabClasses } from '@mui/material';
 
 declare module '@mui/material/styles' {
-  interface TypeText {
-		active: string
-  }
+	interface TypeText {
+		active: string;
+	}
 }
 
 /**
@@ -14,20 +14,50 @@ declare module '@mui/material/styles' {
 export const theme = createTheme({
 	palette: {
 		primary: {
-			main: '#4402FF'
+			main: '#4402FF',
 		},
 		secondary: {
-			main: '#B694FF'
+			main: '#B694FF',
 		},
 		text: {
-			active: '#4402FF'
+			active: '#4402FF',
 		},
 		background: {
-			paper: '#F3F5F7'
+			paper: '#F3F5F7',
 		},
-		divider: '#6C8190'
+		divider: '#6C8190',
 	},
 	typography: {
-		fontFamily: '\'Ubuntu\', sans-serif'
-	}
+		fontFamily: "'Ubuntu', sans-serif",
+	},
+	components: {
+		MuiButton: {
+			defaultProps: {
+				disableElevation: true,
+			},
+		},
+		// @ts-expect-error @mui/lab MuiTabPanel styleOverrides
+		MuiTabPanel: {
+			styleOverrides: {
+				root: {
+					padding: 0,
+				},
+			},
+		},
+		MuiTab: {
+			defaultProps: {
+				disableRipple: true,
+			},
+			styleOverrides: {
+				root: {
+					textTransform: 'initial',
+					height: '72px',
+					backgroundColor: '#F3F5F7',
+					[`&.${tabClasses.selected}`]: {
+						backgroundColor: '#FFFFFF',
+					},
+				},
+			},
+		},
+	},
 });

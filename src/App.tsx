@@ -1,6 +1,8 @@
+import { TabPanel } from '@mui/lab';
 import { Header } from './components/header';
 import { Highlight } from './components/highlight';
 import { Tabs } from './components/tabs';
+import { Candidate } from './pages/candidate';
 import { Recruiter } from './pages/recruiter';
 
 export const App = () => {
@@ -9,8 +11,14 @@ export const App = () => {
 			<Header />
 			<main>
 				<Highlight />
-				<Tabs />
-				<Recruiter />
+				<Tabs>
+					<TabPanel value="candidate">
+						<Candidate />
+					</TabPanel>
+					<TabPanel value="recruiter">
+						<Recruiter />
+					</TabPanel>
+				</Tabs>
 			</main>
 		</>
 	);
