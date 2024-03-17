@@ -3,7 +3,7 @@ import { Tab } from '@mui/material';
 import { FC, PropsWithChildren, useState } from 'react';
 
 export const Tabs: FC<PropsWithChildren> = ({ children }) => {
-	const [activeTab, setActiveTab] = useState<string>('recruiter');
+	const [activeTab, setActiveTab] = useState<string>('candidate');
 
 	return (
 		<TabContext value={activeTab}>

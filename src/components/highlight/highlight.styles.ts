@@ -2,7 +2,7 @@ import { Box, Typography, styled } from '@mui/material';
 import { HEADER } from '../header/header.constants';
 
 export const Container = styled(Box)(({ theme }) => ({
-	height: 'calc(100vh - 72px)',
+	minHeight: 'calc(100vh - 72px)',
 
 	backgroundColor: theme.palette.primary.main,
 

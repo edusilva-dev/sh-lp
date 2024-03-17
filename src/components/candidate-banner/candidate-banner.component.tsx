@@ -1,17 +1,39 @@
-import { FC } from 'react';
-import { CandidateBannerContainer } from './candidate-banner.styles';
-import { Box, Button, Link, Stack, Typography } from '@mui/material';
 import bannerPath from '@/assets/images/first-banner-candidate.png';
+import {
+	Box,
+	Button,
+	Link,
+	Stack,
+	Theme,
+	Typography,
+	useMediaQuery,
+} from '@mui/material';
+import { FC } from 'react';
+import { PrimaryLightContainer } from '../primary-light-container';
 
 export const CandidateBanner: FC = () => {
+	const isMobile = useMediaQuery<Theme>((theme) =>
+		theme.breakpoints.down('md')
+	);
+
 	return (
-		<CandidateBannerContainer>
-			<Stack direction={['column', 'row']} gap="48px">
+		<PrimaryLightContainer>
+			<Stack
+				direction={['column', 'row']}
+				justifyContent="center"
+				alignItems="center"
+				gap="48px"
+			>
 				<Box
 					sx={(theme) => ({
 						width: '100%',
+						[theme.breakpoints.down('sm')]: {
+							maxHeight: '315.55px',
+							height: '600px',
+						},
 						[theme.breakpoints.up('sm')]: {
 							width: '656px',
+							maxHeight: '600px',
 						},
 					})}
 					component="img"
@@ -20,37 +42,14 @@ export const CandidateBanner: FC = () => {
 				<Stack gap={['48px', '110px']}>
 					<Stack gap="24px">
 						<Stack>
-							<Typography
-								sx={(theme) => ({
-									fontSize: theme.typography.pxToRem(24),
-									[theme.breakpoints.up('sm')]: {
-										fontSize: theme.typography.pxToRem(40),
-									},
-								})}
-							>
+							<Typography variant={isMobile ? 'h2' : 'h1'} fontWeight={400}>
 								Adeus seleções intermináveis.
 							</Typography>
-							<Typography
-								sx={(theme) => ({
-									fontWeight: 300,
-									fontSize: theme.typography.pxToRem(24),
-									[theme.breakpoints.up('sm')]: {
-										fontSize: theme.typography.pxToRem(40),
-									},
-								})}
-							>
+							<Typography variant={isMobile ? 'h2' : 'h1'}>
 								Olá, processos transparentes.
 							</Typography>
 						</Stack>
-						<Typography
-							sx={(theme) => ({
-								fontWeight: 500,
-								fontSize: theme.typography.pxToRem(16),
-								[theme.breakpoints.up('sm')]: {
-									fontSize: theme.typography.pxToRem(20),
-								},
-							})}
-						>
+						<Typography variant={isMobile ? 'body1' : 'h3'}>
 							Com a Skill Hunter, você encontra as melhores oportunidades do
 							mercado e deixa para trás os testes sem sentido e critérios
 							nebulosos.
@@ -92,16 +91,7 @@ export const CandidateBanner: FC = () => {
 							</Box>
 						</Stack>
 						<Stack direction={['column', 'row']} gap="24px" alignItems="center">
-							<Button
-								variant="contained"
-								sx={(theme) => ({
-									width: '196px',
-									paddingY: '12px',
-									borderRadius: '80px',
-									backgroundColor: theme.palette.common.white,
-									color: theme.palette.common.black,
-								})}
-							>
+							<Button color="secondary" variant="contained">
 								Cadastre-se
 							</Button>
 							<Typography component="span">
@@ -114,6 +104,6 @@ export const CandidateBanner: FC = () => {
 					</Stack>
 				</Stack>
 			</Stack>
-		</CandidateBannerContainer>
+		</PrimaryLightContainer>
 	);
 };
