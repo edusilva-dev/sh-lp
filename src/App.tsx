@@ -4,6 +4,7 @@ import { Highlight } from './components/highlight';
 import { Tabs } from './components/tabs';
 import { Candidate } from './pages/candidate';
 import { Recruiter } from './pages/recruiter';
+import { Footer } from './components/footer';
 
 export const App = () => {
 	return (
@@ -20,6 +21,8 @@ export const App = () => {
 					</TabPanel>
 				</Tabs>
 			</main>
+
+			<Footer />
 		</>
 	);
 };
