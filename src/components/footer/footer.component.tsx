@@ -1,6 +1,7 @@
 import { Stack, Typography } from '@mui/material';
 import { FC } from 'react';
-import { FaIceCream } from 'react-icons/fa';
+
+import SkillHunterLogo from '@/assets/logos/skill-hunter-label.svg';
 
 export const Footer: FC = () => {
 	return (
@@ -14,7 +15,7 @@ export const Footer: FC = () => {
 				borderTop: `1px solid ${theme.palette.background.paper}`
 			})}
 		>
-			<FaIceCream /> 
+			<img src={SkillHunterLogo} /> 
 
 			<Typography variant='body1' mt={[ 6, 0 ]}>
         Copyrights © 2023. Todos os direitos reservados à Firedev It Solutions

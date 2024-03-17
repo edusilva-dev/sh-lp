@@ -1,20 +1,21 @@
 import { FC } from 'react';
-import { Title } from '../section-title';
-import { ContentContainer, PlansContainer } from './plans.styles';
+import { PlansContainer } from './plans.styles';
 import { Plan } from './components/plan';
 
 import { PLANS } from './mocks/plans.mock';
+import { Container } from '../container';
+import { SectionTitle } from '../section-title';
 
 export const Plans: FC = () => {
 	return (
-		<ContentContainer>
-			<Title>Conheça os planos</Title>
+		<Container sx={(theme) => ({ bgcolor: theme.palette.background.paper })}>
+			<SectionTitle>Conheça os planos</SectionTitle>
 
-			<PlansContainer>
+			<PlansContainer mt={6}>
 				{PLANS.map((plan, index) => (
 					<Plan key={index} data={plan} />
 				))}
 			</PlansContainer>
-		</ContentContainer>
+		</Container>
 	);
 };
