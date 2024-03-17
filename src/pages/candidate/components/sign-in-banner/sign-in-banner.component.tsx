@@ -1,54 +1,95 @@
 import CandidateBanner from '@/assets/images/candidate-banner-2.png';
 import { Container } from '@/components/container';
-import { Box, Button, Link, Stack, Typography } from '@mui/material';
+import {
+	Button,
+	Link,
+	Stack,
+	Theme,
+	Typography,
+	useMediaQuery,
+} from '@mui/material';
 import { FC } from 'react';
 
-export const SignInBanner: FC = () => (
-	<Container>
-		<Stack alignItems="center">
-			<Box
-				sx={{
-					height: '480px',
-					width: '100%',
-					maxWidth: '1344px',
-					backgroundImage: `url(${CandidateBanner})`,
-					backgroundSize: 'cover',
-					backgroundPosition: '100px',
-					borderRadius: 2,
-					padding: 6,
-				}}
-			>
+export const SignInBanner: FC = () => {
+	const isMobile = useMediaQuery<Theme>((theme) =>
+		theme.breakpoints.down('sm')
+	);
+
+	return (
+		<Container>
+			<Stack alignItems="center">
 				<Stack
-					justifyContent="space-between"
 					sx={(theme) => ({
-						maxWidth: '400px',
-						height: '100%',
-						backgroundColor: theme.palette.common.white,
-						padding: 3,
+						position: 'relative',
+						height: '480px',
+						width: '100%',
+						maxWidth: '1344px',
+						backgroundSize: 'cover',
 						borderRadius: 2,
+						padding: 6,
+						overflow: 'hidden',
+						backgroundImage: `url(${CandidateBanner})`,
+						[theme.breakpoints.down('sm')]: {
+							backgroundPositionX: '-300px',
+							backgroundPositionY: '-120px',
+							padding: 2,
+							'::after': {
+								position: 'absolute',
+								content: '""',
+								bottom: 0,
+								left: 0,
+								height: '60%',
+								width: '100%',
+								backgroundImage:
+									'linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0))',
+								zIndex: 0,
+							},
+						},
+						[theme.breakpoints.up('sm')]: {
+							backgroundPosition: '100px',
+						},
 					})}
 				>
-					<Typography variant="h2">
-						Com a Skill Hunter é selecionado por fazer o que você faz de melhor,
-						de forma 100% gratuita.
-					</Typography>
-					<Stack gap={3}>
-						<Button variant="contained">Cadastre-se</Button>
-						<Typography
-							alignSelf="center"
-							color="primary.main"
-							component={Stack}
-							direction="row"
-							gap={0.5}
-						>
-							Já possui uma conta?
-							<Link href="#" fontWeight={500} sx={{ textDecoration: 'none' }}>
-								Entre
-							</Link>
+					<Stack
+						zIndex={1}
+						justifyContent="space-between"
+						gap={4}
+						sx={(theme) => ({
+							maxWidth: '400px',
+							backgroundColor: theme.palette.common.white,
+							padding: 3,
+							borderRadius: 2,
+							[theme.breakpoints.down('sm')]: {
+								marginTop: 'auto',
+								alignSelf: 'center',
+							},
+							[theme.breakpoints.up('sm')]: {
+								height: '100%',
+							},
+						})}
+					>
+						<Typography variant={isMobile ? 'h3' : 'h2'}>
+							Com a Skill Hunter é selecionado por fazer o que você faz de
+							melhor, de forma 100% gratuita.
 						</Typography>
+						<Stack gap={3}>
+							<Button variant="contained">Cadastre-se</Button>
+							<Typography
+								alignSelf="center"
+								color="primary.main"
+								component={Stack}
+								direction="row"
+								gap={0.5}
+							>
+								Já possui uma conta?
+								<Link href="#" fontWeight={500} sx={{ textDecoration: 'none' }}>
+									Entre
+								</Link>
+							</Typography>
+						</Stack>
 					</Stack>
 				</Stack>
-			</Box>
-		</Stack>
-	</Container>
-);
+			</Stack>
+		</Container>
+	);
+};
