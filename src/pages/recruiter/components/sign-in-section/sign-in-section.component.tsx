@@ -20,12 +20,29 @@ export const SignInSection: FC = () => {
 					certas
 				</Typography>
 				<Stack
-					direction={isMobile ? 'column' : 'row'}
+					direction={isMobile ? 'column-reverse' : 'row'}
 					alignItems="center"
 					gap={3}
+					{...(isMobile && {
+						width: '100%',
+					})}
 				>
-					<Button variant="outlined">Solicitar demonstração</Button>
-					<Button variant="contained">Conheça os planos</Button>
+					<Button
+						sx={(theme) => ({
+							[theme.breakpoints.down('lg')]: { width: '100%' },
+						})}
+						variant="outlined"
+					>
+						Solicitar demonstração
+					</Button>
+					<Button
+						sx={(theme) => ({
+							[theme.breakpoints.down('lg')]: { width: '100%' },
+						})}
+						variant="contained"
+					>
+						Conheça os planos
+					</Button>
 				</Stack>
 			</Stack>
 		</Container>
