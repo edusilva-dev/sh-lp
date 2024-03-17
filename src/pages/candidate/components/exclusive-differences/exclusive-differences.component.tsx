@@ -23,10 +23,7 @@ export const ExclusiveDifferences: FC = () => {
 					justifyContent="center"
 					gap={4}
 				>
-					<ExclusiveDifferencesCard
-						flex={isMobile ? 1 : '0 1 885px'}
-						height="500px"
-					>
+					<ExclusiveDifferencesCard flex={isMobile ? 1 : '0 1 885px'}>
 						<Stack
 							direction={isMobile ? 'column' : 'row'}
 							height="100%"
