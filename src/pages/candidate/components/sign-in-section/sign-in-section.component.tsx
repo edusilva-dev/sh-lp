@@ -11,6 +11,7 @@ export const SignInSection: FC = () => (
 			<Stack direction="row" alignItems="center" gap={3}>
 				<Button variant="contained">Cadastre-se</Button>
 				<Typography
+					fontWeight={400}
 					color="primary.main"
 					component={Stack}
 					direction="row"
