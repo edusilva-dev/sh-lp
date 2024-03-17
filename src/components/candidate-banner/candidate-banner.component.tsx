@@ -75,17 +75,17 @@ export const CandidateBanner: FC = () => {
 							})}
 						>
 							<Box component="li">
-								<Typography>
+								<Typography fontWeight={400}>
 									É selecionado pelas suas capacidades, não por indicação
 								</Typography>
 							</Box>
 							<Box component="li">
-								<Typography>
+								<Typography fontWeight={400}>
 									Tem acesso a oportunidades em grandes players do mercado
 								</Typography>
 							</Box>
 							<Box component="li">
-								<Typography>
+								<Typography fontWeight={400}>
 									Economiza até 50% do tempo* ao aplicar para uma posição
 								</Typography>
 							</Box>
@@ -94,7 +94,7 @@ export const CandidateBanner: FC = () => {
 							<Button color="secondary" variant="contained">
 								Cadastre-se
 							</Button>
-							<Typography component="span">
+							<Typography component="span" fontWeight={400}>
 								Já possui uma conta?{' '}
 								<Link href="#" sx={{ fontWeight: 500, textDecoration: 'none' }}>
 									Entre

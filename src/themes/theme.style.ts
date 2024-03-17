@@ -24,7 +24,7 @@ export const theme = createTheme({
 		divider: '#6C8190',
 	},
 	typography: {
-		fontFamily: '\'Ubuntu\', sans-serif',
+		fontFamily: "'Ubuntu', sans-serif",
 		h1: {
 			fontWeight: 500,
 			fontSize: '2.5rem',
@@ -36,12 +36,19 @@ export const theme = createTheme({
 			lineHeight: '32px',
 		},
 		h3: {
+			fontWeight: 500,
 			fontSize: '1.25rem',
 			lineHeight: '32px',
 		},
 		body1: {
+			fontWeight: 500,
 			fontSize: '1rem',
 			lineHeight: '24px',
+		},
+		body2: {
+			fontWeight: 500,
+			fontSize: '0.875rem',
+			lineHeight: '18px',
 		},
 	},
 	components: {

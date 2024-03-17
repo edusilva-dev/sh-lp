@@ -41,7 +41,7 @@ export const ExclusiveDifferences: FC = () => (
 									mais rápido
 								</Typography>
 							</Stack>
-							<Typography color="#1E2E3A">
+							<Typography color="#1E2E3A" fontWeight={400}>
 								A Skill Hunter te mostra vagas adequadas para o seu perfil. Ao
 								aplicar para uma vaga, conte brevemente sobre sua experiência e
 								para estar qualificado em poucos passos
@@ -55,7 +55,7 @@ export const ExclusiveDifferences: FC = () => (
 							<VerticalBars />
 							<Stack>
 								<Typography variant="h2">Acompanhe seu desempenho</Typography>
-								<Typography color="#1E2E3A">
+								<Typography color="#1E2E3A" fontWeight={400}>
 									<Typography fontWeight={500} component="span">
 										Sem processos confusos
 									</Typography>
@@ -70,7 +70,7 @@ export const ExclusiveDifferences: FC = () => (
 							<Notebook />
 							<Stack>
 								<Typography variant="h2">Aplicação simplificada</Typography>
-								<Typography color="#1E2E3A">
+								<Typography color="#1E2E3A" fontWeight={400}>
 									<Typography fontWeight={500} component="span">
 										Responda somente o necessário
 									</Typography>

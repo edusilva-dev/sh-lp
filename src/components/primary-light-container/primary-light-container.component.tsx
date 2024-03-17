@@ -7,7 +7,9 @@ export const PrimaryLightContainer: FC<PropsWithChildren> = ({ children }) => {
 		<Container
 			sx={(theme) => ({
 				backgroundColor: theme.palette.primary.light,
-				[`.${typographyClasses.root}`]: { color: theme.palette.common.white },
+				[`.${typographyClasses.root}`]: {
+					color: theme.palette.common.white,
+				},
 			})}
 		>
 			{children}
