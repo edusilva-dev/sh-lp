@@ -24,7 +24,7 @@ export const theme = createTheme({
 		divider: '#6C8190',
 	},
 	typography: {
-		fontFamily: "'Ubuntu', sans-serif",
+		fontFamily: '\'Ubuntu\', sans-serif',
 		h1: {
 			fontWeight: 500,
 			fontSize: '2.5rem',

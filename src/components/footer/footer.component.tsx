@@ -7,8 +7,12 @@ export const Footer: FC = () => {
 		<Stack 
 			direction={[ 'column', 'row' ]}
 			alignItems={[ 'flex-start', 'center' ]}
-			justifyContent='space-between' 
-			sx={{ px: 3, py: 6, }}
+			justifyContent='space-between'
+			sx={(theme) => ({ 
+				px: 3,
+				py: 6,
+				borderTop: `1px solid ${theme.palette.background.paper}`
+			})}
 		>
 			<FaIceCream /> 
 
