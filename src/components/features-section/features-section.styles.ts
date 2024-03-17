@@ -9,6 +9,8 @@ export const SectionContainer = styled(Container)(({ theme }) => ({
 	['& img.mobile']: {
 		maxWidth: '100%',
 		display: 'none',
+
+		marginLeft: theme.spacing(-6),
 	},
 
 	['& img.desktop']: {
@@ -18,14 +20,20 @@ export const SectionContainer = styled(Container)(({ theme }) => ({
 		zIndex: 1
 	},
 
-	[theme.breakpoints.down('lg')]: {
+	[theme.breakpoints.down('md')]: {
 		['& img.desktop']: {
 			display: 'none',
 		},
 
 		['& img.mobile']: {
 			display: 'block',
-			marginTop: theme.spacing(6)
+			marginTop: theme.spacing(6),
+		}
+	},
+
+	[theme.breakpoints.down('sm')]: {
+		['& img.mobile']: {
+			marginLeft: theme.spacing(-3),
 		}
 	}
 
