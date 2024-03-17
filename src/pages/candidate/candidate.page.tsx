@@ -1,6 +1,7 @@
 import { CandidateBanner } from '@/components/candidate-banner';
 import { FC } from 'react';
 import { ExclusiveDifferences } from './components/exclusive-differences';
+import { SignInBanner } from './components/sign-in-banner';
 import { SignInSection } from './components/sign-in-section';
 
 export const Candidate: FC = () => {
@@ -9,6 +10,7 @@ export const Candidate: FC = () => {
 			<CandidateBanner />
 			<ExclusiveDifferences />
 			<SignInSection />
+			<SignInBanner />
 		</>
 	);
 };
