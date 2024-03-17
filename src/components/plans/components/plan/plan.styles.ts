@@ -10,16 +10,17 @@ export const Card = styled(Box)(({ theme }) => ({
 	overflow: 'hidden',
 
 	[theme.breakpoints.up('sm')]: {
-		width: '312px',
-		height: '584px',
+		width: '25%',
+		minHeight: '584px',
 	}
 }));
 
 export const CardContentContainer = styled(Box)(({ theme }) => ({
-	height: '100%',
+	flexGrow: 1,
 
 	display: 'flex',
 	flexDirection: 'column',
+	justifyContent: 'space-between',
 
 	padding: theme.spacing(3)
 }));
@@ -40,7 +41,11 @@ export const CardDescription = styled(Typography)(({ theme }) => ({
 	fontWeight: theme.typography.fontWeightRegular,
 }));
 
-export const PlanOption = styled(Typography)(({ theme }) => ({
+type PlanOptionProps = {
+	$hasDot?: boolean
+}
+
+export const PlanOption = styled(Typography)<PlanOptionProps>(({ theme, $hasDot }) => ({
 	display: 'flex',
 	alignItems: 'center',
 
@@ -48,24 +53,27 @@ export const PlanOption = styled(Typography)(({ theme }) => ({
 	fontSize: theme.typography.pxToRem(14),
 	lineHeight: theme.typography.pxToRem(18),
 	fontWeight: theme.typography.fontWeightRegular,
-	textIndent: theme.spacing(2),
 
 	position: 'relative',
+	
+	...($hasDot && {
+		textIndent: theme.spacing(2),
 
-	['&::before']: {
-		content: '\"\"',
-
-		width: 4,
-		height: 4,
-
-		display: 'block',
-
-		backgroundColor: theme.palette.secondary.main,
-		borderRadius: '100%',
-
-		position: 'absolute',
-		left: 0
-	}
+		['&::before']: {
+			content: '\"\"',
+		
+			width: 4,
+			height: 4,
+		
+			display: 'block',
+		
+			backgroundColor: theme.palette.secondary.main,
+			borderRadius: '100%',
+		
+			position: 'absolute',
+			left: 0
+		}
+	})
 }));
 
 export const PlanPrice = styled(Typography)(({ theme }) => ({
@@ -82,16 +90,27 @@ export const CurrencyLabel = styled(Typography)(({ theme }) => ({
 	fontWeight: theme.typography.fontWeightRegular,
 }));
 
-export const HireButton = styled(Button)(({ theme }) => ({
+export const CustomPriceLabel = styled(Typography)(({ theme }) => ({
+	color: theme.palette.common.black,
+	fontSize: theme.typography.pxToRem(20),
+	lineHeight: theme.typography.pxToRem(32),
+	fontWeight: theme.typography.fontWeightMedium,
+}));
+
+type HireButtonProps = {
+	$isCustom: boolean
+}
+
+export const HireButton = styled(Button)<HireButtonProps>(({ theme, $isCustom }) => ({
 	width: '100%',
 	height: '42px',
   
-	backgroundColor: theme.palette.primary.main,
 	borderRadius: '80px',
 
 	textTransform: 'none',
-	color: theme.palette.common.white,
+	color: $isCustom ? theme.palette.common.black : theme.palette.common.white,
 	fontSize: theme.typography.pxToRem(14),
 	lineHeight: theme.typography.pxToRem(18),
 	fontWeight: theme.typography.fontWeightRegular,
+	borderWidth: 2
 }));

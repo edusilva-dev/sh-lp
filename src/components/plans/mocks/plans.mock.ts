@@ -9,7 +9,8 @@ export const PLANS = [
 			'Base de talentos da Skill Hunter',
 			'Pacotes de desbloqueio disponíveis'
 		],
-		price: 0
+		price: 0,
+		isCustom: false,
 	},
 	{
 		title: 'Plano Essencials',
@@ -19,7 +20,8 @@ export const PLANS = [
 			'15 desbloqueios mensais',
 			'Criação de desafios'
 		],
-		price: 40
+		price: 40,
+		isCustom: false,
 	},
 	{
 		title: 'Plano Premium',
@@ -31,7 +33,8 @@ export const PLANS = [
 			'Treinamento da equipe interna',
 			'Insights da I.A.'
 		],
-		price: 64
+		price: 64,
+		isCustom: false,
 	},
 	{
 		title: 'Plano Personalizado',
@@ -40,6 +43,7 @@ export const PLANS = [
 		options: [
 			'Personalize seu plano e crie sua experiência ideal!'
 		],
-		price: null
+		price: 999,
+		isCustom: true,
 	}
 ];
