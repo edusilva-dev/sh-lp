@@ -1,17 +1,19 @@
 import { TabPanel } from '@mui/lab';
+import { Box } from '@mui/material';
+import { Fragment } from 'react';
+import { Footer } from './components/footer';
 import { Header } from './components/header';
 import { Highlight } from './components/highlight';
+import { Partners } from './components/partners';
 import { Tabs } from './components/tabs';
 import { Candidate } from './pages/candidate';
 import { Recruiter } from './pages/recruiter';
-import { Footer } from './components/footer';
-import { Partners } from './components/partners';
 
 export const App = () => {
 	return (
-		<>
+		<Fragment>
 			<Header />
-			<main>
+			<Box component="main" sx={{ overflow: 'hidden' }}>
 				<Highlight />
 				<Tabs>
 					<TabPanel value="candidate">
@@ -21,10 +23,9 @@ export const App = () => {
 						<Recruiter />
 					</TabPanel>
 				</Tabs>
-			</main>
-			
+			</Box>
 			<Partners />
 			<Footer />
-		</>
+		</Fragment>
 	);
 };
