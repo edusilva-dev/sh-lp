@@ -26,10 +26,12 @@ export const theme = createTheme({
 	typography: {
 		fontFamily: "'Ubuntu', sans-serif",
 		h1: {
+			fontWeight: 500,
 			fontSize: '2.5rem',
 			lineHeight: '56px',
 		},
 		h2: {
+			fontWeight: 500,
 			fontSize: '1.5rem',
 			lineHeight: '32px',
 		},

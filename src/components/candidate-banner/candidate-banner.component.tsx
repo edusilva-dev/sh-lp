@@ -42,10 +42,10 @@ export const CandidateBanner: FC = () => {
 				<Stack gap={['48px', '110px']}>
 					<Stack gap="24px">
 						<Stack>
-							<Typography variant={isMobile ? 'h2' : 'h1'} fontWeight={400}>
+							<Typography variant={isMobile ? 'h2' : 'h1'}>
 								Adeus seleções intermináveis.
 							</Typography>
-							<Typography variant={isMobile ? 'h2' : 'h1'}>
+							<Typography variant={isMobile ? 'h2' : 'h1'} fontWeight={400}>
 								Olá, processos transparentes.
 							</Typography>
 						</Stack>
