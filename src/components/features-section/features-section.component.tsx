@@ -22,8 +22,7 @@ export const FeaturesSection: FC = () => {
 			<Grid
 				container
 				rowSpacing={ 4 }
-				columnSpacing={ 4 }
-				mt={[ 6, 14 ]}
+				mt={[ 5, 5, 14 ]}
 				sx={{
 					width: '60%',
 					zIndex: 100,
@@ -31,7 +30,7 @@ export const FeaturesSection: FC = () => {
 				}}
 			>
 				{FEATURES.map((feature, index) => (
-					<Grid item key={index} lg={6}>
+					<Grid item key={index} sm={12} md={6}>
 						<Feature description={feature.description} icon={feature.icon} />
 					</Grid>
 				))}
