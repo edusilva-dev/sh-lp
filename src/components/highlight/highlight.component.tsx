@@ -2,6 +2,7 @@ import highlight from '@/assets/images/highlight.png';
 import mobileHighlight from '@/assets/images/mobile-highlight.png';
 import { Stack, Theme, Typography, useMediaQuery } from '@mui/material';
 import { FC } from 'react';
+import { HEADER } from '../header/header.constants';
 
 export const Highlight: FC = () => {
 	const isMobile = useMediaQuery<Theme>((theme) =>
@@ -10,7 +11,7 @@ export const Highlight: FC = () => {
 
 	return (
 		<Stack
-			height="calc(100vh - 70px)"
+			height={`calc(100dvh - ${HEADER.height.mobile}px)`}
 			bgcolor="primary.main"
 			sx={(theme) => ({
 				[theme.breakpoints.down('sm')]: {

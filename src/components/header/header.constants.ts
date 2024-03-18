@@ -1,6 +1,6 @@
 export const HEADER = {
 	height: {
-		mobile: 65,
+		mobile: 72,
 		desktop: 90
 	}
 };
