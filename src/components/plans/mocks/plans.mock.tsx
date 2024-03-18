@@ -27,6 +27,7 @@ export const PLANS = [
 			'Pacotes de desbloqueio disponíveis',
 		],
 		price: 0,
+		bgColor: '#4402FF33',
 		isCustom: false,
 	},
 	{
@@ -49,6 +50,7 @@ export const PLANS = [
 		imageSrc: `${baseUrl}/essencials-plan.svg`,
 		options: ['15 desbloqueios mensais', 'Criação de desafios'],
 		price: 40,
+		bgColor: '#4402FF80',
 		isCustom: false,
 	},
 	{
@@ -77,6 +79,7 @@ export const PLANS = [
 			'Insights da I.A.',
 		],
 		price: 64,
+		bgColor: '#4402FFB3',
 		isCustom: false,
 	},
 	{
@@ -100,6 +103,7 @@ export const PLANS = [
 		imageSrc: `${baseUrl}/custom-plan.svg`,
 		options: ['Personalize seu plano e crie sua experiência ideal!'],
 		price: 999,
+		bgColor: '#4402FF',
 		isCustom: true,
 	},
 ];

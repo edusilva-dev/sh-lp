@@ -9,17 +9,17 @@ type HireButtonProps = {
 };
 
 export const Card = styled(Box)(({ theme }) => ({
+	width: '312px',
+
 	display: 'flex',
 	flexDirection: 'column',
-
 	alignSelf: 'stretch',
+	flex: 1,
 
 	backgroundColor: theme.palette.common.white,
 	borderRadius: '16px',
 
 	overflow: 'hidden',
-
-	width: '312px',
 
 	[theme.breakpoints.down('lg')]: {
 		flexShrink: 0,

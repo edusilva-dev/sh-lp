@@ -20,11 +20,12 @@ type PlanData = {
 	imageSrc: string;
 	options: string[];
 	price: number;
+	bgColor: string;
 	isCustom: boolean;
 };
 
 export const Plan: FC<PlanProps> = ({
-	data: { title, description, imageSrc, options, price, isCustom },
+	data: { title, description, imageSrc, options, price, bgColor, isCustom },
 }) => {
 	const isMobile = useMediaQuery<Theme>((theme) =>
 		theme.breakpoints.down('md')
@@ -32,7 +33,9 @@ export const Plan: FC<PlanProps> = ({
 
 	return (
 		<Card>
-			<Box component="img" src={imageSrc} height="120px" />
+			<Stack alignItems='center' justifyContent='center' height={120} bgcolor={bgColor}>
+				<Box component="img" src={imageSrc} border='none' />
+			</Stack>
 
 			<CardContentContainer>
 				<Stack>
