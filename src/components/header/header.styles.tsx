@@ -9,7 +9,6 @@ export const HeaderContainer = styled(AppBar)(({ theme }) => ({
 	padding: '16px 24px',
 
 	backgroundColor: 'transparent',
-	borderBottom: `1px solid ${theme.palette.divider}`,
 
 	display: 'flex',
 	flexDirection: 'row',

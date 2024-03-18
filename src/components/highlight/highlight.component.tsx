@@ -1,26 +1,59 @@
 import highlight from '@/assets/images/highlight.png';
-import { Stack, Typography } from '@mui/material';
+import mobileHighlight from '@/assets/images/mobile-highlight.png';
+import { Stack, Theme, Typography, useMediaQuery } from '@mui/material';
 import { FC } from 'react';
 
 export const Highlight: FC = () => {
+	const isMobile = useMediaQuery<Theme>((theme) =>
+		theme.breakpoints.down('sm')
+	);
+
 	return (
 		<Stack
-			direction="row"
 			height="calc(100vh - 70px)"
 			bgcolor="primary.main"
-			paddingX={12}
+			paddingX={[3, 12]}
 			sx={(theme) => ({
-				background: `url(${highlight}), ${theme.palette.primary.main}`,
-				backgroundRepeat: 'no-repeat',
-				backgroundSize: 'auto 120%',
-				backgroundPositionX: 'right',
+				[theme.breakpoints.down('sm')]: {
+					background: `url(${mobileHighlight}), ${theme.palette.primary.main}`,
+					backgroundRepeat: 'no-repeat',
+					backgroundPositionX: 'center',
+					backgroundPositionY: '90%',
+				},
+				[theme.breakpoints.up('sm')]: {
+					background: `url(${highlight}), ${theme.palette.primary.main}`,
+					backgroundSize: 'auto 120%',
+					backgroundPositionX: 'right',
+					backgroundRepeat: 'no-repeat',
+				},
 			})}
 		>
-			<Stack maxWidth="590px" justifyContent="center" flex={1} gap={3}>
-				<Typography variant="hero" color="secondary.main" fontWeight={700}>
+			<Stack
+				sx={(theme) => ({
+					maxWidth: '345px',
+					flex: 1,
+					gap: 3,
+					[theme.breakpoints.down('sm')]: {
+						paddingTop: 12,
+					},
+					[theme.breakpoints.up('sm')]: {
+						maxWidth: '590px',
+						justifyContent: 'center',
+					},
+				})}
+			>
+				<Typography
+					variant={isMobile ? 'h1' : 'hero'}
+					fontWeight={isMobile ? 500 : 700}
+					color="secondary.main"
+				>
 					A melhor plataforma de R&S do Brasil
 				</Typography>
-				<Typography variant="h2" color="secondary.main" fontWeight={400}>
+				<Typography
+					variant={isMobile ? 'h3' : 'h2'}
+					fontWeight={400}
+					color="secondary.main"
+				>
 					A Skill Hunter é uma solução completa que faz a ponte entre
 					recrutadores e candidatos qualificados
 				</Typography>
