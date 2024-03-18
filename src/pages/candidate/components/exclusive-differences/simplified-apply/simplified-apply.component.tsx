@@ -1,24 +1,25 @@
+import { FC } from 'react';
 import { ExclusiveDifferencesCard } from '@/components/exclusive-differences-card';
 import { Stack, Typography } from '@mui/material';
-import { FC } from 'react';
 
-import UsersIcon from '@/assets/icons/users.svg?react';
+import NotebookIcon from '@/assets/icons/notebook.svg?react';
 
-export const InternalTraining: FC<{ isMobile: boolean }> = ({ isMobile }) => {
+export const SimplifiedApply: FC<{ isMobile: boolean }> = ({ isMobile }) => {
 	return (
 		<ExclusiveDifferencesCard>
 			<Stack gap={4} height="100%" justifyContent="space-between">
-				<UsersIcon />
+				<NotebookIcon />
 
 				<Stack>
-					<Typography variant={isMobile ? 'h3' : 'h2'}>Treinamento interno</Typography>
+					<Typography variant={isMobile ? 'h3' : 'h2'}>Aplicação simplificada</Typography>
 
 					<Typography color="#1E2E3A" fontWeight={400}>
 						<Typography fontWeight={500} component="span">
-							Crescimento de ponta a ponta
+											Responda somente o necessário
 						</Typography>
-							: acompanhe e desenvolva as competências de seus
-							colaboradores.
+
+										: A Skill Hunter guarda todas as suas informações de forma
+										segura para que você não precise se repetir
 					</Typography>
 				</Stack>
 			</Stack>
