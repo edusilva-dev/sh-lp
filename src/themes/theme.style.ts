@@ -90,6 +90,18 @@ export const theme = createTheme({
 					borderRadius: theme.shape.borderRadius * 10,
 				}),
 			},
+			variants: [
+				{
+					props: {
+						color: 'secondary',
+						variant: 'outlined',
+					},
+					style: ({ theme }) => ({
+						borderColor: theme.palette.secondary.main,
+						borderWidth: '2px !important',
+					}),
+				},
+			],
 		},
 		// @ts-expect-error @mui/lab MuiTabPanel styleOverrides
 		MuiTabPanel: {
