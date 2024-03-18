@@ -75,7 +75,6 @@ export const ReviewsBanner: FC = () => {
 						backgroundColor: theme.palette.common.white,
 						p: 3,
 						borderRadius: 2,
-						maxWidth: '1344px',
 						width: '100%',
 						alignSelf: 'center',
 					})}
@@ -94,7 +93,7 @@ export const ReviewsBanner: FC = () => {
 
 						{!isMobile ? <SignInButtons /> : null}
 					</Stack>
-					
+
 					<Stack gap={6}>
 						<Box
 							sx={(theme) => ({

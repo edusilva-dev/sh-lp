@@ -23,7 +23,6 @@ export const SignInBanner: FC = () => {
 						position: 'relative',
 						height: '480px',
 						width: '100%',
-						maxWidth: '1344px',
 						backgroundSize: 'cover',
 						borderRadius: 2,
 						padding: 6,

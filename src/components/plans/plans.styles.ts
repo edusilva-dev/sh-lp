@@ -17,10 +17,6 @@ export const PlansContainer = styled(Box)(({ theme }) => ({
 
 	display: 'flex',
 	alignItems: 'center',
-	flexDirection: 'column',
+	flexDirection: 'row',
 	gap: theme.spacing(4),
-
-	[theme.breakpoints.up('sm')]: {
-		flexDirection: 'row',
-	}
 }));
