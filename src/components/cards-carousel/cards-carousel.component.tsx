@@ -1,5 +1,3 @@
-import LeftChevron from '@/assets/icons/left-chevron.svg?react';
-import RightChevron from '@/assets/icons/right-chevron.svg?react';
 import {
 	Avatar,
 	Stack,
@@ -10,6 +8,7 @@ import {
 } from '@mui/material';
 import useEmblaCarousel from 'embla-carousel-react';
 import { FC } from 'react';
+import { CarouselControllers } from '../carousel-controllers';
 
 export type Review = {
 	content: string;
@@ -71,35 +70,11 @@ export const CardsCarousel: FC<CardsCarouselProps> = ({ reviews }) => {
 						</Stack>
 					))}
 				</Stack>
-				<Stack direction="row" alignSelf={['flex-start', 'flex-end']} gap={4}>
-					<Stack
-						onClick={() => emblaApi?.scrollPrev()}
-						alignItems="center"
-						justifyContent="center"
-						sx={(theme) => ({
-							borderRadius: '100%',
-							height: '40px',
-							width: '40px',
-							backgroundColor: theme.palette.common.white,
-							cursor: 'pointer',
-						})}
-					>
-						<LeftChevron />
-					</Stack>
-					<Stack
-						onClick={() => emblaApi?.scrollNext()}
-						alignItems="center"
-						justifyContent="center"
-						sx={(theme) => ({
-							borderRadius: '100%',
-							height: '40px',
-							width: '40px',
-							backgroundColor: theme.palette.common.white,
-							cursor: 'pointer',
-						})}
-					>
-						<RightChevron />
-					</Stack>
+				<Stack alignSelf={['flex-start', 'flex-end']}>
+					<CarouselControllers
+						onNextClick={() => emblaApi?.scrollNext()}
+						onPrevClick={() => emblaApi?.scrollPrev()}
+					/>
 				</Stack>
 			</Stack>
 		</Stack>

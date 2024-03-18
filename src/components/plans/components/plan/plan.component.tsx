@@ -9,11 +9,7 @@ import {
 	useMediaQuery,
 } from '@mui/material';
 import { FC } from 'react';
-import {
-	Card,
-	CardContentContainer,
-	PlanOption
-} from './plan.styles';
+import { Card, CardContentContainer, PlanOption } from './plan.styles';
 
 type PlanProps = {
 	data: PlanData;
