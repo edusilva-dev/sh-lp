@@ -35,7 +35,6 @@ export const PlanOption = styled(Typography, {
 	shouldForwardProp: (propName) => propName !== 'hasDot',
 })<PlanOptionProps>(({ theme, hasDot }) => ({
 	display: 'flex',
-	alignItems: 'center',
 
 	color: theme.palette.common.black,
 	fontSize: theme.typography.pxToRem(14),
@@ -45,7 +44,7 @@ export const PlanOption = styled(Typography, {
 	position: 'relative',
 
 	...(hasDot && {
-		textIndent: theme.spacing(2),
+		paddingLeft: theme.spacing(2),
 
 		['&::before']: {
 			content: '""',
@@ -60,6 +59,7 @@ export const PlanOption = styled(Typography, {
 
 			position: 'absolute',
 			left: 0,
+			top: 7
 		},
 	}),
 }));

@@ -20,35 +20,32 @@ export const CandidateBanner: FC = () => {
 		<PrimaryLightContainer>
 			<Stack
 				direction={['column', 'row']}
-				justifyContent="center"
-				alignItems="center"
-				gap={6}
+				justifyContent="space-between"
+				gap={[ 3, 6 ]}
 			>
-				<Box
-					component="img"
-					src={bannerPath}
-					sx={(theme) => ({
-						width: '100%',
-						[theme.breakpoints.up('sm')]: {
-							maxWidth: '200px',
-						},
-						[theme.breakpoints.up('md')]: {
-							maxWidth: '300px',
-						},
-						[theme.breakpoints.up('lg')]: {
-							maxWidth: '600px',
-						},
-					})}
-				/>
-				<Stack gap={['48px', '110px']}>
-					<Stack gap="24px">
-						<Stack>
+				<Stack width={['100%', '50%']}>
+					<Box
+						component="img"
+						src={bannerPath}
+						sx={{
+							height: ['345px', '100%'],
+							borderRadius: 2,
+							objectFit: 'cover',
+							objectPosition: 'bottom'
+						}}
+					/>
+				</Stack>
+
+				<Stack width={['100%', '50%']} justifyContent='space-between'>
+					<Stack gap={3}>
+						<Stack width='100%'>
 							<Typography
 								variant={isMobile ? 'h2' : 'h1'}
 								color="secondary.main"
 							>
 								Adeus seleções intermináveis.
 							</Typography>
+							
 							<Typography
 								variant={isMobile ? 'h2' : 'h1'}
 								fontWeight={400}
@@ -57,6 +54,7 @@ export const CandidateBanner: FC = () => {
 								Olá, processos transparentes.
 							</Typography>
 						</Stack>
+						
 						<Typography
 							variant={isMobile ? 'body1' : 'h3'}
 							color="secondary.main"
@@ -66,38 +64,44 @@ export const CandidateBanner: FC = () => {
 							nebulosos.
 						</Typography>
 					</Stack>
-					<Stack gap="32px">
+
+					<Stack mt={[6, 6, 14]}>
 						<Typography variant="h3" color="secondary.main">
 							Na Skill Hunter, você:
 						</Typography>
+
 						<Stack
-							gap="16px"
+							gap={2}
 							component="ul"
-							sx={(theme) => ({
+							sx={{
 								marginLeft: '-25px',
-								color: theme.palette.common.white,
-							})}
+								color: 'common.white',
+							}}
 						>
 							<Box component="li">
 								<Typography fontWeight={400} color="secondary.main">
 									É selecionado pelas suas capacidades, não por indicação
 								</Typography>
 							</Box>
+
 							<Box component="li">
 								<Typography fontWeight={400} color="secondary.main">
 									Tem acesso a oportunidades em grandes players do mercado
 								</Typography>
 							</Box>
+							
 							<Box component="li">
 								<Typography fontWeight={400} color="secondary.main">
-									Economiza até 50% do tempo* ao aplicar para uma posição
+									Economiza até <b>50% do tempo*</b> ao aplicar para uma posição
 								</Typography>
 							</Box>
 						</Stack>
-						<Stack direction={['column', 'row']} gap="24px" alignItems="center">
-							<Button color="secondary" variant="contained">
+						
+						<Stack direction={['column', 'column', 'row']} gap={3} alignItems="center">
+							<Button color="secondary" variant="contained" sx={{ width: isMobile ? '100%' : 'unset' }}>
 								Cadastre-se
 							</Button>
+
 							<Typography
 								component="span"
 								fontWeight={400}

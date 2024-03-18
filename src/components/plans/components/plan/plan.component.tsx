@@ -2,7 +2,6 @@ import { RoundGradientButton } from '@/components/round-gradient-button';
 import {
 	Box,
 	Button,
-	List,
 	Stack,
 	Theme,
 	Typography,
@@ -44,13 +43,13 @@ export const Plan: FC<PlanProps> = ({
 					</Typography>
 
 					{options.length > 0 && !isCustom && (
-						<List sx={{ marginTop: 3 }}>
+						<Stack sx={{ marginTop: 4 }} gap={1}>
 							{options.map((option, index) => (
 								<PlanOption key={index} hasDot={!isCustom}>
 									{option}
 								</PlanOption>
 							))}
-						</List>
+						</Stack>
 					)}
 
 					{options.length > 0 && isCustom && (
