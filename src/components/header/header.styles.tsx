@@ -1,5 +1,4 @@
 import { AppBar, Box, styled } from '@mui/material';
-import { HiMenuAlt1 } from 'react-icons/hi';
 
 import { HEADER } from './header.constants';
 
@@ -21,14 +20,6 @@ export const HeaderContainer = styled(AppBar)(({ theme }) => ({
 		height: HEADER.height.desktop,
 		padding: '32px 24px',
 		border: 'none'
-	},
-}));
-
-export const MenuIcon = styled(HiMenuAlt1)(({ theme }) => ({
-	color: theme.palette.common.white,
-
-	[theme.breakpoints.up('sm')]: {
-		display: 'none',
 	},
 }));
 
