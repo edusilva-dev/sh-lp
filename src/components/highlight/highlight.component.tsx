@@ -16,9 +16,8 @@ export const Highlight: FC = () => {
 			sx={(theme) => ({
 				[theme.breakpoints.down('sm')]: {
 					background: `url(${mobileHighlight}), ${theme.palette.primary.main}`,
+					backgroundSize: 'cover',
 					backgroundRepeat: 'no-repeat',
-					backgroundPositionX: 'center',
-					backgroundPositionY: '90%',
 				},
 				[theme.breakpoints.up('sm')]: {
 					background: `url(${highlight}), ${theme.palette.primary.main}`,
