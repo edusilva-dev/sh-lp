@@ -1,4 +1,4 @@
-import { Box, Typography, styled } from '@mui/material';
+import { Box, Button as BaseButton, Typography, styled } from '@mui/material';
 
 export const RecruiterBannerContainer = styled(Box)(({ theme }) => ({
 	width: `calc(100% - (${theme.spacing(3)} * 2))`,
@@ -71,6 +71,14 @@ export const ButtonsContainer = styled(Box)(({ theme }) => ({
 
 		marginTop: theme.spacing(20),
 	}
+}));
+
+export const Button = styled(BaseButton)(({ theme }) => ({
+	width: '100%',
+
+	[theme.breakpoints.up('sm')]: {
+		width: '50%',
+	} 
 }));
 
 export const BannerContainer = styled(Box)(({ theme }) => ({
