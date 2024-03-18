@@ -1,4 +1,4 @@
-import { createTheme, tabClasses } from '@mui/material';
+import { createTheme, tabClasses, tabsClasses } from '@mui/material';
 
 declare module '@mui/material/styles' {
 	interface TypographyVariants {
@@ -103,15 +103,26 @@ export const theme = createTheme({
 				disableRipple: true,
 			},
 			styleOverrides: {
-				root: {
+				root: ({ theme }) => ({
+					...theme.typography.body1,
 					textTransform: 'initial',
 					height: '72px',
 					backgroundColor: '#F3F5F7',
 					[`&.${tabClasses.selected}`]: {
 						backgroundColor: '#FFFFFF',
 					},
-				},
+					[theme.breakpoints.up('sm')]: {
+						...theme.typography.h2
+					}
+				}),
 			},
 		},
+		MuiTabs: {
+			styleOverrides: {
+				indicator: {
+					height: 4
+				}
+			}
+		}
 	},
 });
