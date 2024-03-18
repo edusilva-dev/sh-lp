@@ -24,7 +24,7 @@ export const theme = createTheme({
 		divider: '#6C8190',
 	},
 	typography: {
-		fontFamily: "'Ubuntu', sans-serif",
+		fontFamily: '\'Ubuntu\', sans-serif',
 		h1: {
 			fontWeight: 500,
 			fontSize: '2.5rem',
@@ -60,6 +60,7 @@ export const theme = createTheme({
 			styleOverrides: {
 				root: ({ theme }) => ({
 					minWidth: '200px',
+					height: '42px',
 					textTransform: 'initial',
 					padding: '12px',
 					borderRadius: theme.shape.borderRadius * 10,

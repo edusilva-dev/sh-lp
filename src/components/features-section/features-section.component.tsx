@@ -1,6 +1,5 @@
 import { FC } from 'react';
-import { SectionTitle } from '../section-title';
-import { Grid } from '@mui/material';
+import { Grid, Theme, Typography, useMediaQuery } from '@mui/material';
 import { FEATURES } from './mocks/features.mock';
 import { Feature } from './components/feature';
 
@@ -10,21 +9,32 @@ import macProPathDesktop from '@/assets/images/features-mac.png';
 import macProPathMobile from '@/assets/images/features-mac-mobile.png';
 
 export const FeaturesSection: FC = () => {
+	const isMobile = useMediaQuery<Theme>((theme) =>
+		theme.breakpoints.down('md')
+	);
+
 	return (
 		<SectionContainer>
-			<SectionTitle pt={2} sx={{ color: '#fff', zIndex: 10, position: 'relative' }}>
+			<Typography 
+				variant={isMobile ? 'h2' : 'h1'}
+				pt={2}
+				sx={{ color: 'common.white', zIndex: 10, position: 'relative' }}
+			>
 				Conheça outras funcionalidades
-			</SectionTitle>
+			</Typography>
 
-			<img src={macProPathDesktop} className='desktop' />
-			<img src={macProPathMobile} className='mobile' />
+			{isMobile ? (
+				<img src={macProPathMobile} className='mobile' />
+			) : (
+				<img src={macProPathDesktop} className='desktop' />
+			)}
 
 			<Grid
 				container
 				rowSpacing={ 4 }
 				mt={[ 5, 5, 14 ]}
 				sx={{
-					width: '60%',
+					width: ['100%', '60%'],
 					zIndex: 100,
 					position: 'relative'
 				}}

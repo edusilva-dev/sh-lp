@@ -8,7 +8,6 @@ export const SectionContainer = styled(Container)(({ theme }) => ({
 
 	['& img.mobile']: {
 		maxWidth: '100%',
-		display: 'none',
 
 		marginLeft: theme.spacing(-6),
 	},
@@ -21,12 +20,7 @@ export const SectionContainer = styled(Container)(({ theme }) => ({
 	},
 
 	[theme.breakpoints.down('md')]: {
-		['& img.desktop']: {
-			display: 'none',
-		},
-
 		['& img.mobile']: {
-			display: 'block',
 			marginTop: theme.spacing(6),
 		}
 	},

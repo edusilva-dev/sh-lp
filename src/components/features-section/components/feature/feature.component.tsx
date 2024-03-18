@@ -1,5 +1,6 @@
-import { Stack, Typography } from '@mui/material';
+import { Typography } from '@mui/material';
 import { FC } from 'react';
+import { FeatureContainer } from './feature.styles';
 
 type FeatureProps = {
   description: string
@@ -8,20 +9,12 @@ type FeatureProps = {
 
 export const Feature: FC<FeatureProps> = ({ description, icon }) => {
 	return (
-		<Stack gap={3} sx={{ width: 312, height: 128 }}>
+		<FeatureContainer gap={[2, 3]} sx={{ width: ['100%', 312], height: 'auto' }}>
 			{icon}
 
-			<Typography sx={
-				(theme) => ({
-					maxWidth: 312,
-					color: theme.palette.common.white,
-					fontSize: theme.typography.pxToRem(20),
-					lineHeight: theme.typography.pxToRem(32),
-					fontWeight: theme.typography.fontWeightMedium, 
-				})}
-			>
+			<Typography variant='h3' sx={{ maxWidth: ['100%', 312], color: 'common.white' }}>
 				{description}
 			</Typography>
-		</Stack>
+		</FeatureContainer>
 	);
 };
