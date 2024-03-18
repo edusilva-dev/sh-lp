@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { Grid, Theme, Typography, useMediaQuery } from '@mui/material';
+import { Box, Grid, Theme, Typography, useMediaQuery } from '@mui/material';
 import { FEATURES } from './mocks/features.mock';
 import { Feature } from './components/feature';
 
@@ -15,7 +15,7 @@ export const FeaturesSection: FC = () => {
 
 	return (
 		<SectionContainer>
-			<Typography 
+			<Typography
 				variant={isMobile ? 'h2' : 'h1'}
 				pt={2}
 				sx={{ color: 'common.white', zIndex: 10, position: 'relative' }}
@@ -24,23 +24,23 @@ export const FeaturesSection: FC = () => {
 			</Typography>
 
 			{isMobile ? (
-				<img src={macProPathMobile} className='mobile' />
+				<Box component="img" src={macProPathMobile} className="mobile" />
 			) : (
-				<img src={macProPathDesktop} className='desktop' />
+				<Box component="img" src={macProPathDesktop} className="desktop" />
 			)}
 
 			<Grid
 				container
-				rowSpacing={ 4 }
-				mt={[ 5, 5, 14 ]}
+				rowSpacing={4}
+				mt={[5, 5, 14]}
 				sx={{
-					width: ['100%', '60%'],
+					width: ['80vw', '60%'],
 					zIndex: 100,
-					position: 'relative'
+					position: 'relative',
 				}}
 			>
 				{FEATURES.map((feature, index) => (
-					<Grid item key={index} sm={12} md={6}>
+					<Grid item key={index} sm={12} lg={6}>
 						<Feature description={feature.description} icon={feature.icon} />
 					</Grid>
 				))}

@@ -2,33 +2,21 @@ import { styled } from '@mui/material';
 import { Container } from '../container';
 
 export const SectionContainer = styled(Container)(({ theme }) => ({
-	backgroundColor: theme.palette.primary.main, 
+	backgroundColor: theme.palette.primary.main,
 
 	position: 'relative',
 
 	['& img.mobile']: {
-		maxWidth: '100%',
+		width: '135%',
 
-		marginLeft: theme.spacing(-6),
+		marginLeft: '-20vw',
 	},
 
 	['& img.desktop']: {
+		width: '50%',
 		position: 'absolute',
 		right: 0,
 		top: theme.spacing(8),
-		zIndex: 1
+		zIndex: 1,
 	},
-
-	[theme.breakpoints.down('md')]: {
-		['& img.mobile']: {
-			marginTop: theme.spacing(6),
-		}
-	},
-
-	[theme.breakpoints.down('sm')]: {
-		['& img.mobile']: {
-			marginLeft: theme.spacing(-3),
-		}
-	}
-
 }));
