@@ -58,7 +58,7 @@ export const PlanOption = styled(
 		
 			display: 'block',
 		
-			backgroundColor: theme.palette.secondary.main,
+			backgroundColor: theme.palette.primary.light,
 			borderRadius: '100%',
 		
 			position: 'absolute',
