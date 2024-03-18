@@ -11,7 +11,7 @@ import { FC } from 'react';
 
 export const SignInSection: FC = () => {
 	const isMobile = useMediaQuery<Theme>((theme) =>
-		theme.breakpoints.down('lg')
+		theme.breakpoints.down('md')
 	);
 
 	return (
@@ -30,6 +30,7 @@ export const SignInSection: FC = () => {
 					width={[ '100%', '100%', '100%', 'auto' ]}
 					direction={isMobile ? 'column' : 'row'}
 					alignItems="center"
+					justifyContent='flex-end'
 					gap={3}
 				>
 					<Button variant="contained" sx={{ width: isMobile ? '100%' : 'auto' }}>Cadastre-se</Button>
