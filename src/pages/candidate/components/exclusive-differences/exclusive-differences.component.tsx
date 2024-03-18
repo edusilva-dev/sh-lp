@@ -18,6 +18,7 @@ export const ExclusiveDifferences: FC = () => {
 				<Typography variant={isMobile ? 'h2' : 'h1'}>
 					Diferenciais Exclusivos
 				</Typography>
+				
 				<Stack
 					direction={isMobile ? 'column' : 'row'}
 					justifyContent="center"
