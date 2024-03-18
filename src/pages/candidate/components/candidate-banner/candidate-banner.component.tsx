@@ -9,7 +9,7 @@ import {
 	useMediaQuery,
 } from '@mui/material';
 import { FC } from 'react';
-import { PrimaryLightContainer } from '../primary-light-container';
+import { PrimaryLightContainer } from '../../../../components/primary-light-container';
 
 export const CandidateBanner: FC = () => {
 	const isMobile = useMediaQuery<Theme>((theme) =>
