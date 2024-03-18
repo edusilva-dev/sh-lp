@@ -14,12 +14,15 @@ export const Card = styled(Box)(({ theme }) => ({
 	display: 'flex',
 	flexDirection: 'column',
 	alignSelf: 'stretch',
-	flex: 1,
 
 	backgroundColor: theme.palette.common.white,
 	borderRadius: '16px',
 
 	overflow: 'hidden',
+
+	[theme.breakpoints.up('lg')]: {
+		flex: 1,
+	},
 
 	[theme.breakpoints.down('lg')]: {
 		flexShrink: 0,
