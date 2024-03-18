@@ -48,7 +48,7 @@ export const PlanOption = styled(
 	position: 'relative',
 	
 	...(hasDot && {
-		textIndent: theme.spacing(2),
+		paddingLeft: theme.spacing(2),
 
 		['&::before']: {
 			content: '\"\"',
