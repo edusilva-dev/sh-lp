@@ -1,7 +1,15 @@
 import { FC } from 'react';
-import { BannerContainer, ButtonsContainer, ContentContainer, RecruiterBannerContainer, RecruiterBannerSubtitle, RecruiterBannerTitle } from './recruiter-banner.styles';
+import {
+	BannerContainer,
+	Button,
+	ButtonsContainer,
+	ContentContainer,
+	RecruiterBannerContainer,
+	RecruiterBannerSubtitle,
+	RecruiterBannerTitle
+} from './recruiter-banner.styles';
 import bannerPath from '@/assets/images/first-banner.png';
-import { Button, Theme, useMediaQuery } from '@mui/material';
+import { Theme, useMediaQuery } from '@mui/material';
 
 export const RecruiterBanner: FC = () => {
 	const isMobile = useMediaQuery<Theme>((theme) =>
@@ -21,32 +29,9 @@ export const RecruiterBanner: FC = () => {
 				</RecruiterBannerSubtitle>
 
 				<ButtonsContainer>
-					<Button 
-						variant='contained'
-						sx={
-							(theme) => ({
-								width: '100%',
+					<Button variant='contained'>Conheça os planos</Button>
 
-								[theme.breakpoints.up('sm')]: {
-									width: '50%',
-								} 
-							})}
-					>
-						Conheça os planos
-					</Button>
-					<Button 
-						variant='outlined'
-						sx={
-							(theme) => ({
-								width: '100%',
-
-								[theme.breakpoints.up('sm')]: {
-									width: '50%',
-								} 
-							})}
-					>
-							Solicitar demonstração
-					</Button>
+					<Button variant='outlined'>Solicitar demonstração</Button>
 				</ButtonsContainer>
 			</ContentContainer>
 
