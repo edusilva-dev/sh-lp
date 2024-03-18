@@ -25,12 +25,15 @@ export const SignInSection: FC = () => {
 				<Typography variant="h3" fontWeight={500} color="#1E2E3A">
 					Encontre as melhores oportunidades nas maiores empresas do país
 				</Typography>
+
 				<Stack
+					width={[ '100%', '100%', '100%', 'auto' ]}
 					direction={isMobile ? 'column' : 'row'}
 					alignItems="center"
 					gap={3}
 				>
-					<Button variant="contained">Cadastre-se</Button>
+					<Button variant="contained" sx={{ width: isMobile ? '100%' : 'auto' }}>Cadastre-se</Button>
+
 					<Typography
 						fontWeight={400}
 						color="primary.main"

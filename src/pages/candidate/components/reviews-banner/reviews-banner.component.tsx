@@ -63,8 +63,10 @@ export const ReviewsBanner: FC = () => {
 					<Typography variant={isMobile ? 'h2' : 'h1'} color="secondary.main">
 						Ouça de quem usa a Skill Hunter
 					</Typography>
+
 					<CardsCarousel reviews={reviews} />
 				</Stack>
+
 				<Stack
 					direction={isMobile ? 'column' : 'row'}
 					justifyItems="space-between"
@@ -83,13 +85,16 @@ export const ReviewsBanner: FC = () => {
 							<Typography variant={isMobile ? 'h2' : 'h1'}>
 								Dê o próximo passo na sua carreira
 							</Typography>
+
 							<Typography variant={isMobile ? 'h3' : 'h2'} fontWeight={400}>
 								Junte-se a milhares de talentos e explore o mercado com vagas
 								sob medida para sua carreira
 							</Typography>
 						</Stack>
+
 						{!isMobile ? <SignInButtons /> : null}
 					</Stack>
+					
 					<Stack gap={6}>
 						<Box
 							sx={(theme) => ({
@@ -102,6 +107,7 @@ export const ReviewsBanner: FC = () => {
 							component="img"
 							src={reviewsBannerPhoto}
 						/>
+
 						{isMobile ? <SignInButtons vertical /> : null}
 					</Stack>
 				</Stack>

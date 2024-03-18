@@ -7,7 +7,8 @@ export type SignInButtonsProps = {
 
 export const SignInButtons: FC<SignInButtonsProps> = ({ vertical }) => (
 	<Stack direction={!vertical ? 'row' : 'column'} alignItems="center" gap={3}>
-		<Button variant="contained">Cadastre-se</Button>
+		<Button sx={{ width: vertical ? '100%' : 'auto' }} variant="contained">Cadastre-se</Button>
+
 		<Typography
 			fontWeight={400}
 			color="primary.main"
