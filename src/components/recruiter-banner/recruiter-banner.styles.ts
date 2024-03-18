@@ -28,14 +28,14 @@ export const RecruiterBannerContainer = styled(Stack)(({ theme }) => ({
 		gap: theme.spacing(4),
 
 		['& img']: {
-			width: '50%',
+			width: `calc(50% - ${theme.spacing(2)})`,
 		},
 	}
 }));
 
 export const ContentContainer = styled(Stack)(({ theme }) => ({
 	[theme.breakpoints.up('md')]: {
-		width: '50%',
+		width: `calc(50% - ${theme.spacing(2)})`,
 		padding: theme.spacing(6),
 
 		justifyContent: 'space-between',
@@ -45,17 +45,16 @@ export const ContentContainer = styled(Stack)(({ theme }) => ({
 export const ButtonsContainer = styled(Stack)(({ theme }) => ({
 	gap: theme.spacing(2),
 
-	[theme.breakpoints.up('md')]: {
+	[theme.breakpoints.up('lg')]: {
 		flexDirection: 'row-reverse',
-
 		gap: theme.spacing(5),
-	}
+	},
 }));
 
 export const Button = styled(BaseButton)(({ theme }) => ({
 	width: '100%',
 
-	[theme.breakpoints.up('md')]: {
+	[theme.breakpoints.up('lg')]: {
 		width: '50%',
 	} 
 }));

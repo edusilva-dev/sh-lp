@@ -1,4 +1,4 @@
-import { createTheme, tabClasses, tabsClasses } from '@mui/material';
+import { createTheme, tabClasses } from '@mui/material';
 
 /**
  * This theme follows the mui doc theme, please, check the documentation.
@@ -63,6 +63,7 @@ export const theme = createTheme({
 					height: '42px',
 					textTransform: 'initial',
 					padding: '12px',
+					borderWidth: 2,
 					borderRadius: theme.shape.borderRadius * 10,
 				}),
 			},
@@ -89,17 +90,17 @@ export const theme = createTheme({
 						backgroundColor: '#FFFFFF',
 					},
 					[theme.breakpoints.up('sm')]: {
-						...theme.typography.h2
-					}
+						...theme.typography.h2,
+					},
 				}),
 			},
 		},
 		MuiTabs: {
 			styleOverrides: {
 				indicator: {
-					height: 4
-				}
-			}
-		}
+					height: 4,
+				},
+			},
+		},
 	},
 });
