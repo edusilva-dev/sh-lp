@@ -33,22 +33,6 @@ export const CardContentContainer = styled(Box)(({ theme }) => ({
 	padding: theme.spacing(3)
 }));
 
-export const CardTitle = styled(Typography)(({ theme }) => ({
-	color: theme.palette.common.black,
-	fontSize: theme.typography.pxToRem(24),
-	lineHeight: theme.typography.pxToRem(32),
-	fontWeight: theme.typography.fontWeightMedium,
-}));
-
-export const CardDescription = styled(Typography)(({ theme }) => ({
-	marginTop: theme.spacing(2),
-
-	color: theme.palette.common.black,
-	fontSize: theme.typography.pxToRem(14),
-	lineHeight: theme.typography.pxToRem(18),
-	fontWeight: theme.typography.fontWeightRegular,
-}));
-
 export const PlanOption = styled(
 	Typography,
 	{ shouldForwardProp: (propName) => propName !== 'hasDot' }
