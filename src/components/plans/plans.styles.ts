@@ -22,5 +22,6 @@ export const PlansContainer = styled(Box)(({ theme }) => ({
 
 	[theme.breakpoints.up('md')]: {
 		flexDirection: 'row',
+		flexWrap: 'wrap',
 	}
 }));

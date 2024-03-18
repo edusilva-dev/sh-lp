@@ -1,9 +1,10 @@
-import RhBannerMobile from '@/assets/images/rh-banner-mobile.png';
-import RhBanner from '@/assets/images/rh-banner.png';
+import { FC } from 'react';
 import { Container } from '@/components/container';
 import { PlansButtons } from '@/components/plans-buttons/plans-buttons.component';
 import { Stack, Theme, Typography, useMediaQuery } from '@mui/material';
-import { FC } from 'react';
+
+import RhBannerMobile from '@/assets/images/rh-banner-mobile.png';
+import RhBanner from '@/assets/images/rh-banner.png';
 
 export const FullImageBanner: FC = () => {
 	const isMobile = useMediaQuery<Theme>((theme) =>
@@ -24,13 +25,12 @@ export const FullImageBanner: FC = () => {
 						padding: 6,
 						overflow: 'hidden',
 						backgroundImage: `url(${RhBanner})`,
+						backgroundRepeat: 'no-repeat',
+						WebkitBackgroundSize: 'cover',
 						[theme.breakpoints.down('sm')]: {
 							backgroundImage: `url(${RhBannerMobile})`,
 							padding: 2,
-						},
-						[theme.breakpoints.up('sm')]: {
-							backgroundPosition: '100px',
-						},
+						}
 					})}
 				>
 					<Stack
@@ -55,6 +55,7 @@ export const FullImageBanner: FC = () => {
 							Qualifique seu departamento de RH e invista tempo nas atividades
 							certas
 						</Typography>
+
 						<PlansButtons vertical />
 					</Stack>
 				</Stack>

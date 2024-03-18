@@ -18,7 +18,7 @@ export const Card = styled(Box)(({ theme }) => ({
 	overflow: 'hidden',
 
 	[theme.breakpoints.up('md')]: {
-		width: '25%',
+		width: 'calc(50% - 32px)',
 		minHeight: '584px',
 	}
 }));
