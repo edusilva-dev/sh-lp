@@ -6,7 +6,7 @@ import UsersIcon from '@/assets/icons/users.svg?react';
 
 export const InternalTraining: FC<{ isMobile: boolean }> = ({ isMobile }) => {
 	return (
-		<ExclusiveDifferencesCard sx={{ width: '100%' }}>
+		<ExclusiveDifferencesCard>
 			<Stack gap={4} height="100%" justifyContent="space-between">
 				<UsersIcon />
 

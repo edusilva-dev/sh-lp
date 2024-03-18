@@ -6,7 +6,7 @@ import { ExclusiveDifferencesCard } from '@/components/exclusive-differences-car
 
 export const HighlightCard: FC<{ isMobile: boolean }> = ({ isMobile }) => {
 	return (
-		<ExclusiveDifferencesCard sx={{ width: '60%' }}>
+		<ExclusiveDifferencesCard width={[ '100%', '100%', '60%']}>
 			<Stack
 				direction={isMobile ? 'column' : 'row'}
 				height="100%"
@@ -15,7 +15,8 @@ export const HighlightCard: FC<{ isMobile: boolean }> = ({ isMobile }) => {
 				<Stack
 					alignItems="center"
 					justifyContent="center"
-					width='50%'
+					width={[ '100%', '100%', '50%']}
+					height={[ '240px', '240px', 'unset' ]}
 					overflow="hidden"
 					sx={{
 						borderRadius: 2,
@@ -25,7 +26,7 @@ export const HighlightCard: FC<{ isMobile: boolean }> = ({ isMobile }) => {
 				>
 					<Button
 						startIcon={<StarsIcon />}
-						sx={{ width: '80%', height: [40, 72] }}
+						sx={{ width: '80%', height: [40, 40, 72] }}
 						color="secondary"
 						variant="contained"
 					>
@@ -35,7 +36,7 @@ export const HighlightCard: FC<{ isMobile: boolean }> = ({ isMobile }) => {
 					</Button>
 				</Stack>
 
-				<Stack justifyContent="space-between" gap={3} width='50%'>
+				<Stack justifyContent="space-between" gap={3} width={['100%', '100%', '50%']}>
 					<Stack gap={2}>
 						<Typography variant={isMobile ? 'h3' : 'h2'}>
 										Skill Hunter IA

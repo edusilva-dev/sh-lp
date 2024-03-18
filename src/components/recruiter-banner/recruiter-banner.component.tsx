@@ -6,7 +6,7 @@ import {
 	RecruiterBannerContainer,
 } from './recruiter-banner.styles';
 import bannerPath from '@/assets/images/first-banner.png';
-import { Box, Stack, Theme, Typography, useMediaQuery } from '@mui/material';
+import { Box, Theme, Typography, useMediaQuery } from '@mui/material';
 
 export const RecruiterBanner: FC = () => {
 	const isMobile = useMediaQuery<Theme>((theme) =>

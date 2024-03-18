@@ -6,7 +6,7 @@ import ListIcon from '@/assets/icons/list.svg?react';
 
 export const VerifiedSkills: FC<{ isMobile: boolean }> = ({ isMobile }) => {
 	return (
-		<ExclusiveDifferencesCard width='100%'>
+		<ExclusiveDifferencesCard>
 			<Stack gap={4} height="100%" justifyContent="space-between">
 				<ListIcon />
 

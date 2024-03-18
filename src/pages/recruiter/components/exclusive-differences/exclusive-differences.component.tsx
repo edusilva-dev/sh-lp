@@ -8,7 +8,7 @@ import { InternalTraining } from './internal-training';
 
 export const ExclusiveDifferences: FC = () => {
 	const isMobile = useMediaQuery<Theme>((theme) =>
-		theme.breakpoints.down('lg')
+		theme.breakpoints.down('md')
 	);
 
 	return (
@@ -26,7 +26,7 @@ export const ExclusiveDifferences: FC = () => {
 				>
 					<HighlightCard isMobile={isMobile} />
 
-					<Stack gap={4} width='40%'>
+					<Stack gap={4} width={[ '100%', '100%', '40%']}>
 						<VerifiedSkills isMobile={isMobile} />
 
 						<InternalTraining isMobile={isMobile} />

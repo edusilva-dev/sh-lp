@@ -14,6 +14,7 @@ export const RecruiterBannerContainer = styled(Stack)(({ theme }) => ({
 
 	['& img']: {
 		width: '100%',
+		height: '272px',
 		borderRadius: theme.typography.pxToRem(16),
 		objectFit: 'cover',
 	},
@@ -29,6 +30,7 @@ export const RecruiterBannerContainer = styled(Stack)(({ theme }) => ({
 
 		['& img']: {
 			width: `calc(50% - ${theme.spacing(2)})`,
+			height: 'unset',
 		},
 	}
 }));
