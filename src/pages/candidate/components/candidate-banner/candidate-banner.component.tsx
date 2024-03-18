@@ -13,22 +13,22 @@ import { PrimaryLightContainer } from '../../../../components/primary-light-cont
 
 export const CandidateBanner: FC = () => {
 	const isMobile = useMediaQuery<Theme>((theme) =>
-		theme.breakpoints.down('lg')
+		theme.breakpoints.down('md')
 	);
 
 	return (
 		<PrimaryLightContainer>
 			<Stack
-				direction={['column', 'column', 'column', 'row']}
+				direction={['column', 'row']}
 				justifyContent="space-between"
 				gap={[ 3, 6 ]}
 			>
-				<Stack width={['100%', '100%', '100%', '50%']}>
+				<Stack width={['100%', '50%']}>
 					<Box
 						component="img"
 						src={bannerPath}
 						sx={{
-							height: '100%',
+							height: ['345px', '100%'],
 							borderRadius: 2,
 							objectFit: 'cover',
 							objectPosition: 'bottom'
@@ -36,9 +36,9 @@ export const CandidateBanner: FC = () => {
 					/>
 				</Stack>
 
-				<Stack width={['100%', '100%', '100%', '50%']} justifyContent='space-between'>
+				<Stack width={['100%', '50%']} justifyContent='space-between'>
 					<Stack gap={3}>
-						<Stack>
+						<Stack width='100%'>
 							<Typography
 								variant={isMobile ? 'h2' : 'h1'}
 								color="secondary.main"
@@ -65,7 +65,7 @@ export const CandidateBanner: FC = () => {
 						</Typography>
 					</Stack>
 
-					<Stack mt={14}>
+					<Stack mt={[6, 6, 14]}>
 						<Typography variant="h3" color="secondary.main">
 							Na Skill Hunter, você:
 						</Typography>
@@ -97,8 +97,8 @@ export const CandidateBanner: FC = () => {
 							</Box>
 						</Stack>
 						
-						<Stack direction={['column', 'row']} gap="24px" alignItems="center">
-							<Button color="secondary" variant="contained">
+						<Stack direction={['column', 'column', 'row']} gap={3} alignItems="center">
+							<Button color="secondary" variant="contained" sx={{ width: isMobile ? '100%' : 'unset' }}>
 								Cadastre-se
 							</Button>
 
