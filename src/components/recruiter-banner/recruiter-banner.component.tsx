@@ -6,7 +6,7 @@ import {
 	RecruiterBannerContainer,
 } from './recruiter-banner.styles';
 import bannerPath from '@/assets/images/first-banner.png';
-import { Box, Theme, Typography, useMediaQuery } from '@mui/material';
+import { Box, Stack, Theme, Typography, useMediaQuery } from '@mui/material';
 
 export const RecruiterBanner: FC = () => {
 	const isMobile = useMediaQuery<Theme>((theme) =>
@@ -27,7 +27,7 @@ export const RecruiterBanner: FC = () => {
 					</Typography>
 				</Box>
 
-				<ButtonsContainer mt={[3, 0]}>
+				<ButtonsContainer mt={[3, 3]}>
 					<Button variant='contained'>Conheça os planos</Button>
 
 					<Button variant='outlined'>Solicitar demonstração</Button>
