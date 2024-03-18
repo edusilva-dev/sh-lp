@@ -24,7 +24,7 @@ export const SideBanner: FC = () => {
 						Transforme agora mesmo sua rotina de RH
 					</Typography>
 
-					<Typography variant={isMobile ? 'h3' : 'h2'} fontWeight={400} mt={[ 6, 4 ]}>
+					<Typography variant={isMobile ? 'h3' : 'h2'} fontWeight={400} mt={[ 4, 6 ]}>
 						Junte-se a milhares de parceiros e revolucione a maneira de atrair,
 						selecionar e qualificar talentos.
 					</Typography>
