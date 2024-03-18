@@ -10,7 +10,7 @@ import macProPathMobile from '@/assets/images/features-mac-mobile.png';
 
 export const FeaturesSection: FC = () => {
 	const isMobile = useMediaQuery<Theme>((theme) =>
-		theme.breakpoints.down('md')
+		theme.breakpoints.down('lg')
 	);
 
 	return (

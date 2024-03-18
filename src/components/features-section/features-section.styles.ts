@@ -13,11 +13,11 @@ export const SectionContainer = styled(Container)(({ theme }) => ({
 	},
 
 	['& img.desktop']: {
+		top: 0,
 		width: '50%',
 		maxWidth: '600px',
 		position: 'absolute',
 		right: 0,
-		top: theme.spacing(8),
 		zIndex: 1,
 	},
 }));
