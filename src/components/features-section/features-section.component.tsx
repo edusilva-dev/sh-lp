@@ -10,7 +10,7 @@ import macProPathMobile from '@/assets/images/features-mac-mobile.png';
 
 export const FeaturesSection: FC = () => {
 	const isMobile = useMediaQuery<Theme>((theme) =>
-		theme.breakpoints.down('lg')
+		theme.breakpoints.down('md')
 	);
 
 	return (
@@ -24,9 +24,9 @@ export const FeaturesSection: FC = () => {
 			</Typography>
 
 			{isMobile ? (
-				<Box component="img" src={macProPathMobile} className="mobile" />
+				<Box component="img" src={macProPathMobile} className="mobile" maxWidth={[ '600px', '500px' ]} marginLeft={'-150px'} />
 			) : (
-				<Box component="img" src={macProPathDesktop} className="desktop" />
+				<Box component="img" src={macProPathDesktop} className="desktop" maxWidth={[ '600px', '600px', '500px', '700px' ]} />
 			)}
 
 			<Grid
@@ -40,7 +40,7 @@ export const FeaturesSection: FC = () => {
 				}}
 			>
 				{FEATURES.map((feature, index) => (
-					<Grid item key={index} sm={12} lg={6}>
+					<Grid item key={index} md={6}>
 						<Feature description={feature.description} icon={feature.icon} />
 					</Grid>
 				))}

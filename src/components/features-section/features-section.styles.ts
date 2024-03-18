@@ -8,14 +8,11 @@ export const SectionContainer = styled(Container)(({ theme }) => ({
 
 	['& img.mobile']: {
 		width: '135%',
-
-		marginLeft: '-35vw',
 	},
 
 	['& img.desktop']: {
 		top: 0,
 		width: '50%',
-		maxWidth: '600px',
 		position: 'absolute',
 		right: 0,
 		zIndex: 1,
