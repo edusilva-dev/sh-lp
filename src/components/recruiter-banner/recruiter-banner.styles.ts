@@ -10,11 +10,11 @@ export const RecruiterBannerContainer = styled(Box)(({ theme }) => ({
 	borderRadius: theme.typography.pxToRem(16),
 
 	display: 'flex',
-	[theme.breakpoints.down('sm')]: {
+	[theme.breakpoints.down('md')]: {
 		flexDirection: 'column',
 	},
 
-	[theme.breakpoints.up('sm')]: {
+	[theme.breakpoints.up('md')]: {
 		height: '648px',
 		flexDirection: 'row',
 		flexWrap: 'wrap',
@@ -25,7 +25,7 @@ export const ContentContainer = styled(Box)(({ theme }) => ({
 	display: 'flex',
 	flexDirection: 'column',
 
-	[theme.breakpoints.up('sm')]: {
+	[theme.breakpoints.up('md')]: {
 		width: '50%',
 		padding: theme.spacing(6)
 	}
@@ -37,7 +37,7 @@ export const RecruiterBannerTitle = styled(Typography)(({ theme }) => ({
 	lineHeight: theme.typography.pxToRem(32),
 	fontWeight: theme.typography.fontWeightMedium,
 
-	[theme.breakpoints.up('sm')]: {
+	[theme.breakpoints.up('md')]: {
 		fontSize: theme.typography.pxToRem(40),
 		lineHeight: theme.typography.pxToRem(56),
 	}
@@ -51,7 +51,7 @@ export const RecruiterBannerSubtitle = styled(Typography)(({ theme }) => ({
 	lineHeight: theme.typography.pxToRem(32),
 	fontWeight: theme.typography.fontWeightRegular,
 
-	[theme.breakpoints.up('sm')]: {
+	[theme.breakpoints.up('md')]: {
 		marginTop: theme.spacing(6),
 
 		fontSize: theme.typography.pxToRem(24),
@@ -65,7 +65,7 @@ export const ButtonsContainer = styled(Box)(({ theme }) => ({
 	flexDirection: 'column',
 	gap: theme.spacing(2),
 
-	[theme.breakpoints.up('sm')]: {
+	[theme.breakpoints.up('md')]: {
 		flexDirection: 'row-reverse',
 		gap: theme.spacing(5),
 
@@ -76,7 +76,7 @@ export const ButtonsContainer = styled(Box)(({ theme }) => ({
 export const Button = styled(BaseButton)(({ theme }) => ({
 	width: '100%',
 
-	[theme.breakpoints.up('sm')]: {
+	[theme.breakpoints.up('md')]: {
 		width: '50%',
 	} 
 }));
@@ -89,11 +89,11 @@ export const BannerContainer = styled(Box)(({ theme }) => ({
 		objectFit: 'contain',
 	},
 
-	[theme.breakpoints.down('sm')]: {
+	[theme.breakpoints.down('md')]: {
 		marginTop: theme.spacing(6),
 	},
 
-	[theme.breakpoints.up('sm')]: {
+	[theme.breakpoints.up('md')]: {
 		width: '50%',
 		height: '100%',
 

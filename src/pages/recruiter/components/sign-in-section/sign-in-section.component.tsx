@@ -15,14 +15,14 @@ export const SignInSection: FC = () => {
 				alignItems="center"
 				justifyContent="space-between"
 			>
-				<Typography variant="h3" fontWeight={500} color="#1E2E3A">
-					Qualifique seu departamento de RH e invista tempo nas atividades
-					certas
+				<Typography variant={isMobile ? 'h3' : 'body1'} fontWeight={500} color="#1E2E3A">
+					Qualifique seu departamento de RH e invista tempo nas atividades certas
 				</Typography>
+
 				<Stack
 					direction={isMobile ? 'column-reverse' : 'row'}
 					alignItems="center"
-					gap={3}
+					gap={[2, 3]}
 					{...(isMobile && {
 						width: '100%',
 					})}
@@ -35,6 +35,7 @@ export const SignInSection: FC = () => {
 					>
 						Solicitar demonstração
 					</Button>
+					
 					<Button
 						sx={(theme) => ({
 							[theme.breakpoints.down('lg')]: { width: '100%' },

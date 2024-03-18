@@ -42,7 +42,7 @@ export const ExclusiveDifferences: FC = () => {
 							>
 								<Button
 									startIcon={<Stars />}
-									sx={{ width: '80%' }}
+									sx={{ width: '90%' }}
 									color="secondary"
 									variant="contained"
 								>
