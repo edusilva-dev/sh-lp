@@ -1,12 +1,12 @@
 import { Box, Button, Typography, styled } from '@mui/material';
 
 type PlanOptionProps = {
-	hasDot?: boolean
-}
+	hasDot?: boolean;
+};
 
 type HireButtonProps = {
-	isCustom: boolean
-}
+	isCustom: boolean;
+};
 
 export const Card = styled(Box)(({ theme }) => ({
 	display: 'flex',
@@ -20,7 +20,7 @@ export const Card = styled(Box)(({ theme }) => ({
 	[theme.breakpoints.up('md')]: {
 		width: 'calc(50% - 32px)',
 		minHeight: '584px',
-	}
+	},
 }));
 
 export const CardContentContainer = styled(Box)(({ theme }) => ({
@@ -30,13 +30,12 @@ export const CardContentContainer = styled(Box)(({ theme }) => ({
 	flexDirection: 'column',
 	justifyContent: 'space-between',
 
-	padding: theme.spacing(3)
+	padding: theme.spacing(3),
 }));
 
-export const PlanOption = styled(
-	Typography,
-	{ shouldForwardProp: (propName) => propName !== 'hasDot' }
-)<PlanOptionProps>(({ theme, hasDot }) => ({
+export const PlanOption = styled(Typography, {
+	shouldForwardProp: (propName) => propName !== 'hasDot',
+})<PlanOptionProps>(({ theme, hasDot }) => ({
 	display: 'flex',
 	alignItems: 'center',
 
@@ -46,31 +45,33 @@ export const PlanOption = styled(
 	fontWeight: theme.typography.fontWeightRegular,
 
 	position: 'relative',
-	
+
 	...(hasDot && {
-		paddingLeft: theme.spacing(2),
+		textIndent: theme.spacing(2),
 
 		['&::before']: {
-			content: '\"\"',
-		
+			content: '""',
+
 			width: 4,
 			height: 4,
-		
+
 			display: 'block',
-		
+
 			backgroundColor: theme.palette.primary.light,
 			borderRadius: '100%',
-		
+
 			position: 'absolute',
-			left: 0
-		}
-	})
+			left: 0,
+		},
+	}),
 }));
 
-export const HireButton = styled(Button, { shouldForwardProp: (propName) => propName !== 'isCustom' })<HireButtonProps>(({ theme, isCustom }) => ({
+export const HireButton = styled(Button, {
+	shouldForwardProp: (propName) => propName !== 'isCustom',
+})<HireButtonProps>(({ theme, isCustom }) => ({
 	width: '100%',
 	height: '42px',
-  
+
 	borderRadius: '80px',
 
 	textTransform: 'none',
@@ -78,5 +79,5 @@ export const HireButton = styled(Button, { shouldForwardProp: (propName) => prop
 	fontSize: theme.typography.pxToRem(14),
 	lineHeight: theme.typography.pxToRem(18),
 	fontWeight: theme.typography.fontWeightRegular,
-	borderWidth: 2
+	borderWidth: 2,
 }));

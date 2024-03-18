@@ -65,7 +65,7 @@ export const Plan: FC<PlanProps> = ({ data: { title, description, imageSrc, opti
 						variant={isCustom ? 'outlined' : 'contained'}
 						sx={{ marginTop: price > 0 ? 3 : 5 }}
 					>
-						{isCustom ? 'Valor a consultar' : 'Contratar'} 
+						{isCustom ? 'Solicitar contato' : 'Contratar'} 
 					</HireButton>
 				</Stack>
 			</CardContentContainer>
