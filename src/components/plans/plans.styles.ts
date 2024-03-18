@@ -20,7 +20,7 @@ export const PlansContainer = styled(Box)(({ theme }) => ({
 	flexDirection: 'column',
 	gap: theme.spacing(4),
 
-	[theme.breakpoints.up('sm')]: {
+	[theme.breakpoints.up('md')]: {
 		flexDirection: 'row',
 	}
 }));

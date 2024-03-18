@@ -1,5 +1,13 @@
 import { Box, Button, Typography, styled } from '@mui/material';
 
+type PlanOptionProps = {
+	hasDot?: boolean
+}
+
+type HireButtonProps = {
+	isCustom: boolean
+}
+
 export const Card = styled(Box)(({ theme }) => ({
 	display: 'flex',
 	flexDirection: 'column',
@@ -9,7 +17,7 @@ export const Card = styled(Box)(({ theme }) => ({
 
 	overflow: 'hidden',
 
-	[theme.breakpoints.up('sm')]: {
+	[theme.breakpoints.up('md')]: {
 		width: '25%',
 		minHeight: '584px',
 	}
@@ -40,10 +48,6 @@ export const CardDescription = styled(Typography)(({ theme }) => ({
 	lineHeight: theme.typography.pxToRem(18),
 	fontWeight: theme.typography.fontWeightRegular,
 }));
-
-type PlanOptionProps = {
-	hasDot?: boolean
-}
 
 export const PlanOption = styled(
 	Typography,
@@ -78,31 +82,6 @@ export const PlanOption = styled(
 		}
 	})
 }));
-
-export const PlanPrice = styled(Typography)(({ theme }) => ({
-	color: theme.palette.common.black,
-	fontSize: theme.typography.pxToRem(40),
-	lineHeight: theme.typography.pxToRem(56),
-	fontWeight: theme.typography.fontWeightMedium,
-}));
-
-export const CurrencyLabel = styled(Typography)(({ theme }) => ({
-	color: theme.palette.common.black,
-	fontSize: theme.typography.pxToRem(20),
-	lineHeight: theme.typography.pxToRem(32),
-	fontWeight: theme.typography.fontWeightRegular,
-}));
-
-export const CustomPriceLabel = styled(Typography)(({ theme }) => ({
-	color: theme.palette.common.black,
-	fontSize: theme.typography.pxToRem(20),
-	lineHeight: theme.typography.pxToRem(32),
-	fontWeight: theme.typography.fontWeightMedium,
-}));
-
-type HireButtonProps = {
-	isCustom: boolean
-}
 
 export const HireButton = styled(Button, { shouldForwardProp: (propName) => propName !== 'isCustom' })<HireButtonProps>(({ theme, isCustom }) => ({
 	width: '100%',

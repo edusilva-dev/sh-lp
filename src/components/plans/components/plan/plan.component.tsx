@@ -1,6 +1,6 @@
 import { FC } from 'react';
-import { Card, CardContentContainer, CardDescription, CardTitle, CurrencyLabel, CustomPriceLabel, HireButton, PlanOption, PlanPrice } from './plan.styles';
-import { Box, List, Stack } from '@mui/material';
+import { Card, CardContentContainer, HireButton, PlanOption } from './plan.styles';
+import { Box, List, Stack, Theme, Typography, useMediaQuery } from '@mui/material';
 
 type PlanProps = {
   data: PlanData
@@ -16,15 +16,19 @@ type PlanData = {
 }
 
 export const Plan: FC<PlanProps> = ({ data: { title, description, imageSrc, options, price, isCustom } }) => {
+	const isMobile = useMediaQuery<Theme>((theme) =>
+		theme.breakpoints.down('md')
+	);
+
 	return (
 		<Card>
 			<img src={imageSrc} />
 
 			<CardContentContainer>
 				<Stack>
-					<CardTitle>{title}</CardTitle>
+					<Typography variant='h2'>{title}</Typography>
 
-					<CardDescription>{description}</CardDescription>
+					<Typography variant='body2' mt={2}>{description}</Typography>
 
 					{options.length > 0 && !isCustom && (
 						<List sx={{ marginTop: 3 }}>
@@ -44,15 +48,15 @@ export const Plan: FC<PlanProps> = ({ data: { title, description, imageSrc, opti
 				<Stack>
 					{price > 0 && price < 100 && (
 						<Box sx={{ display: 'flex', alignItems: 'flex-end', gap: 1, marginTop: 4 }}>
-							<CurrencyLabel>R$</CurrencyLabel>
-							<PlanPrice>{price}</PlanPrice>
-							<CurrencyLabel>/mês</CurrencyLabel>
+							<Typography variant='h3' fontWeight={400}>R$</Typography>
+							<Typography variant='h1'>{price}</Typography>
+							<Typography variant='h3' fontWeight={400}>/mês</Typography>
 						</Box>
 					)}
 
 					{price > 100 && (
 						<Box sx={{ display: 'flex', alignItems: 'flex-end', gap: 1, marginTop: 4 }}>
-							<CustomPriceLabel>Valor a consultar</CustomPriceLabel>
+							<Typography variant={isMobile ? 'body2' : 'h3'}>Valor a consultar</Typography>
 						</Box>
 					)}
 
