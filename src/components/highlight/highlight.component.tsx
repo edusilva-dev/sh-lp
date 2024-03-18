@@ -12,14 +12,15 @@ export const Highlight: FC = () => {
 		<Stack
 			height="calc(100vh - 70px)"
 			bgcolor="primary.main"
-			paddingX={[3, 12]}
 			sx={(theme) => ({
 				[theme.breakpoints.down('sm')]: {
+					paddingX: 3,
 					background: `url(${mobileHighlight}), ${theme.palette.primary.main}`,
 					backgroundSize: 'cover',
 					backgroundRepeat: 'no-repeat',
 				},
 				[theme.breakpoints.up('sm')]: {
+					paddingX: 12,
 					background: `url(${highlight}), ${theme.palette.primary.main}`,
 					backgroundSize: 'auto 120%',
 					backgroundPositionX: 'right',
