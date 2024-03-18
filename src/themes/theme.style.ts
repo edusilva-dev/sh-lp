@@ -93,12 +93,19 @@ export const theme = createTheme({
 			variants: [
 				{
 					props: {
+						variant: 'outlined',
+					},
+					style: {
+						borderWidth: '2px !important',
+					},
+				},
+				{
+					props: {
 						color: 'secondary',
 						variant: 'outlined',
 					},
 					style: ({ theme }) => ({
 						borderColor: theme.palette.secondary.main,
-						borderWidth: '2px !important',
 					}),
 				},
 			],
