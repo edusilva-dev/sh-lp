@@ -19,6 +19,12 @@ export const RecruiterBannerContainer = styled(Stack)(({ theme }) => ({
 		objectFit: 'cover',
 	},
 
+	[theme.breakpoints.up('sm')]: {
+		width: `calc(100% - (${theme.spacing(6)} * 2))`,
+
+		margin: `${theme.spacing(4)} ${theme.spacing(6)}`,
+	},
+
 	[theme.breakpoints.up('md')]: {
 		width: `calc(100% - (${theme.spacing(6)} * 2))`,
 		height: '708px',
