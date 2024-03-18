@@ -7,7 +7,7 @@ import {
 	Typography,
 	useMediaQuery,
 } from '@mui/material';
-import { FC } from 'react';
+import { FC, ReactNode } from 'react';
 import { Card, CardContentContainer, PlanOption } from './plan.styles';
 
 type PlanProps = {
@@ -16,7 +16,7 @@ type PlanProps = {
 
 type PlanData = {
 	title: string;
-	description: string;
+	description: ReactNode;
 	imageSrc: string;
 	options: string[];
 	price: number;
@@ -32,13 +32,13 @@ export const Plan: FC<PlanProps> = ({
 
 	return (
 		<Card>
-			<img src={imageSrc} />
+			<Box component="img" src={imageSrc} height="120px" />
 
 			<CardContentContainer>
 				<Stack>
 					<Typography variant="h2">{title}</Typography>
 
-					<Typography variant="body2" mt={2}>
+					<Typography component="span" variant="body2" mt={2} fontWeight={400}>
 						{description}
 					</Typography>
 

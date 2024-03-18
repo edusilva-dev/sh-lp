@@ -12,13 +12,18 @@ export const Card = styled(Box)(({ theme }) => ({
 	display: 'flex',
 	flexDirection: 'column',
 
+	alignSelf: 'stretch',
+
 	backgroundColor: theme.palette.common.white,
 	borderRadius: '16px',
 
 	overflow: 'hidden',
 
-	minWidth: '312px',
-	height: '584px',
+	width: '312px',
+
+	[theme.breakpoints.down('lg')]: {
+		flexShrink: 0,
+	},
 }));
 
 export const CardContentContainer = styled(Box)(({ theme }) => ({
@@ -59,7 +64,7 @@ export const PlanOption = styled(Typography, {
 
 			position: 'absolute',
 			left: 0,
-			top: 7
+			top: 7,
 		},
 	}),
 }));
