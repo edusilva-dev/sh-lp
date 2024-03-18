@@ -28,7 +28,7 @@ export const CandidateBanner: FC = () => {
 						component="img"
 						src={bannerPath}
 						sx={{
-							height: ['345px', '100%'],
+							height: ['345px', '600px'],
 							borderRadius: 2,
 							objectFit: 'cover',
 							objectPosition: 'bottom'

@@ -97,7 +97,7 @@ export const ReviewsBanner: FC = () => {
 							component="img"
 							src={reviewsBannerPhoto}
 							sx={{
-								height: ['272px', '372px', '472px', '100%'],
+								height: ['272px', '372px', '472px', '600px'],
 								borderRadius: 2,
 								objectFit: 'cover',
 							}}
