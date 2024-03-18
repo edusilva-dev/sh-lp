@@ -1,10 +1,29 @@
 import { createTheme, tabClasses } from '@mui/material';
 
+declare module '@mui/material/styles' {
+	interface TypographyVariants {
+		hero: React.CSSProperties;
+	}
+
+	// allow configuration using `createTheme`
+	interface TypographyVariantsOptions {
+		hero?: React.CSSProperties;
+	}
+}
+
+// Update the Typography's variant prop options
+declare module '@mui/material/Typography' {
+	interface TypographyPropsVariantOverrides {
+		hero: true;
+	}
+}
+
 /**
  * This theme follows the mui doc theme, please, check the documentation.
  *
  * @Link https://mui.com/material-ui/customization/default-theme/
  */
+
 export const theme = createTheme({
 	spacing: 8,
 	shape: {
@@ -24,7 +43,11 @@ export const theme = createTheme({
 		divider: '#6C8190',
 	},
 	typography: {
-		fontFamily: '\'Ubuntu\', sans-serif',
+		fontFamily: "'Ubuntu', sans-serif",
+		hero: {
+			fontSize: '3.5rem',
+			lineHeight: '80px',
+		},
 		h1: {
 			fontWeight: 500,
 			fontSize: '2.5rem',

@@ -1,5 +1,5 @@
 import { FC, useState } from 'react';
-import { ButtonsContainer, HeaderContainer, } from './header.styles';
+import { ButtonsContainer, HeaderContainer } from './header.styles';
 import { Box, Button, Drawer, Theme, useMediaQuery } from '@mui/material';
 import { HiMenuAlt1 as MenuIcon } from 'react-icons/hi';
 
@@ -17,14 +17,14 @@ export const Header: FC = () => {
 	};
 
 	return (
-		<HeaderContainer elevation={0} position='absolute'>
+		<HeaderContainer elevation={0} position="absolute">
 			{isMobile && (
 				<>
 					<Drawer open={isDrawerOpen} onClose={toggleDrawer}>
 						{/* Colocar itens do menu aqui */}
 					</Drawer>
-	
-					<MenuIcon color='#fff' size={20} onClick={toggleDrawer} />
+
+					<MenuIcon color="#fff" size={20} onClick={toggleDrawer} />
 				</>
 			)}
 
@@ -34,10 +34,16 @@ export const Header: FC = () => {
 
 			{isMobile === false ? (
 				<ButtonsContainer>
-					<Button variant='outlined' color='secondary' sx={{ width: 160 }}>Cadastre-se</Button>
-					<Button variant='contained' color='secondary' sx={{ width: 160 }}>Entre</Button>
+					<Button variant="outlined" color="secondary" sx={{ width: 160 }}>
+						Cadastre-se
+					</Button>
+					<Button variant="contained" color="secondary" sx={{ width: 160 }}>
+						Entre
+					</Button>
 				</ButtonsContainer>
-			) : (<Box width={20}></Box>)}
+			) : (
+				<Box width={20}></Box>
+			)}
 		</HeaderContainer>
 	);
 };
