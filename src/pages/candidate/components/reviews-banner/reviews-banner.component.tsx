@@ -70,16 +70,14 @@ export const ReviewsBanner: FC = () => {
 				<Stack
 					direction={isMobile ? 'column' : 'row'}
 					justifyItems="space-between"
-					gap={6}
-					sx={(theme) => ({
-						backgroundColor: theme.palette.common.white,
-						p: 3,
+					p={3}
+					gap={[6, 6, 6, 0]}
+					sx={{
+						backgroundColor: 'common.white',
 						borderRadius: 2,
-						width: '100%',
-						alignSelf: 'center',
-					})}
+					}}
 				>
-					<Stack flex="1" justifyContent="space-between">
+					<Stack width={['100%', '100%', '100%', '50%']} justifyContent='space-between' p={[0, 0, 0, 6]}>
 						<Stack gap={isMobile ? 3 : 6}>
 							<Typography variant={isMobile ? 'h2' : 'h1'}>
 								Dê o próximo passo na sua carreira
@@ -94,17 +92,15 @@ export const ReviewsBanner: FC = () => {
 						{!isMobile ? <SignInButtons /> : null}
 					</Stack>
 
-					<Stack gap={6}>
+					<Stack gap={6} width={['100%', '100%', '100%', '50%']}>
 						<Box
-							sx={(theme) => ({
-								flex: '1',
-								borderRadius: 2,
-								[theme.breakpoints.up('lg')]: {
-									maxWidth: '500px',
-								},
-							})}
 							component="img"
 							src={reviewsBannerPhoto}
+							sx={{
+								height: ['272px', '372px', '472px', '100%'],
+								borderRadius: 2,
+								objectFit: 'cover',
+							}}
 						/>
 
 						{isMobile ? <SignInButtons vertical /> : null}
