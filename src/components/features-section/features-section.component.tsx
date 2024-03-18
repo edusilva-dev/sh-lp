@@ -18,7 +18,7 @@ export const FeaturesSection: FC = () => {
 
 			<img src={macProPathDesktop} className='desktop' />
 			<img src={macProPathMobile} className='mobile' />
-			
+
 			<Grid
 				container
 				rowSpacing={ 4 }

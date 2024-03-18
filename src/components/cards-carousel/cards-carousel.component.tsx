@@ -1,7 +1,7 @@
 import LeftChevron from '@/assets/icons/left-chevron.svg?react';
 import RightChevron from '@/assets/icons/right-chevron.svg?react';
 import {
-	Box,
+	Avatar,
 	Stack,
 	Theme,
 	Typography,
@@ -58,8 +58,7 @@ export const CardsCarousel: FC<CardsCarouselProps> = ({ reviews }) => {
 							<Stack justifyContent="space-between" height="100%" gap={4}>
 								<Typography variant="h3">{review.content}</Typography>
 								<Stack direction={isMobile ? 'column' : 'row'} gap={3}>
-									<Box
-										component="img"
+									<Avatar
 										src={review.photo}
 										sx={{ width: '32px', height: '32px' }}
 									/>

@@ -13,7 +13,7 @@ export const App = () => {
 	return (
 		<Fragment>
 			<Header />
-			<Box component="main" sx={{ overflow: 'hidden' }}>
+			<Box component="main">
 				<Highlight />
 				<Tabs>
 					<TabPanel value="candidate">

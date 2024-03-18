@@ -3,7 +3,6 @@ import { CardsContainer, ContentContainer, SmallCardsContainer, Title } from './
 import { HighlightCard } from './components/highlight-card/highlight-card.component';
 import { Card } from './components/card';
 import { CARDS } from './mocks/cards.mock';
-import { CallRH } from '../call-rh/call-rh.component';
 
 export const ExclusiveDifferences: FC = () => {
 	return (
@@ -19,8 +18,6 @@ export const ExclusiveDifferences: FC = () => {
 					))}
 				</SmallCardsContainer>
 			</CardsContainer>
-
-			<CallRH />
 		</ContentContainer>
 	);
 };

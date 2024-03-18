@@ -29,7 +29,7 @@ export const Plan: FC<PlanProps> = ({ data: { title, description, imageSrc, opti
 					{options.length > 0 && !isCustom && (
 						<List sx={{ marginTop: 3 }}>
 							{options.map((option, index) => (
-								<PlanOption key={index} $hasDot={!isCustom}>{option}</PlanOption>
+								<PlanOption key={index} hasDot={!isCustom}>{option}</PlanOption>
 							))}
 						</List>
 					)}
@@ -57,7 +57,7 @@ export const Plan: FC<PlanProps> = ({ data: { title, description, imageSrc, opti
 					)}
 
 					<HireButton 
-						$isCustom={isCustom}
+						isCustom={isCustom}
 						variant={isCustom ? 'outlined' : 'contained'}
 						sx={{ marginTop: price > 0 ? 3 : 5 }}
 					>

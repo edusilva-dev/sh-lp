@@ -42,10 +42,13 @@ export const CardDescription = styled(Typography)(({ theme }) => ({
 }));
 
 type PlanOptionProps = {
-	$hasDot?: boolean
+	hasDot?: boolean
 }
 
-export const PlanOption = styled(Typography)<PlanOptionProps>(({ theme, $hasDot }) => ({
+export const PlanOption = styled(
+	Typography,
+	{ shouldForwardProp: (propName) => propName !== 'hasDot' }
+)<PlanOptionProps>(({ theme, hasDot }) => ({
 	display: 'flex',
 	alignItems: 'center',
 
@@ -56,7 +59,7 @@ export const PlanOption = styled(Typography)<PlanOptionProps>(({ theme, $hasDot 
 
 	position: 'relative',
 	
-	...($hasDot && {
+	...(hasDot && {
 		textIndent: theme.spacing(2),
 
 		['&::before']: {
@@ -98,17 +101,17 @@ export const CustomPriceLabel = styled(Typography)(({ theme }) => ({
 }));
 
 type HireButtonProps = {
-	$isCustom: boolean
+	isCustom: boolean
 }
 
-export const HireButton = styled(Button)<HireButtonProps>(({ theme, $isCustom }) => ({
+export const HireButton = styled(Button, { shouldForwardProp: (propName) => propName !== 'isCustom' })<HireButtonProps>(({ theme, isCustom }) => ({
 	width: '100%',
 	height: '42px',
   
 	borderRadius: '80px',
 
 	textTransform: 'none',
-	color: $isCustom ? theme.palette.common.black : theme.palette.common.white,
+	color: isCustom ? theme.palette.common.black : theme.palette.common.white,
 	fontSize: theme.typography.pxToRem(14),
 	lineHeight: theme.typography.pxToRem(18),
 	fontWeight: theme.typography.fontWeightRegular,

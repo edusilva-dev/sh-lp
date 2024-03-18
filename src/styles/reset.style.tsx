@@ -10,6 +10,8 @@ export const ResetCSS = () => <GlobalStyles styles={(theme) => ({
 		fontFamily: theme.typography.fontFamily,
 
 		boxSizing: 'border-box',
+
+		overflowX: 'hidden',
 	},
 
 	'*': {
