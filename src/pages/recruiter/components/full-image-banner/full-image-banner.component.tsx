@@ -12,7 +12,7 @@ export const FullImageBanner: FC = () => {
 	);
 
 	return (
-		<Container bgcolor='background.paper'>
+		<Container bgcolor="background.paper">
 			<Stack alignItems="center">
 				<Stack
 					sx={(theme) => ({
@@ -29,7 +29,7 @@ export const FullImageBanner: FC = () => {
 						[theme.breakpoints.down('sm')]: {
 							backgroundImage: `url(${RhBannerMobile})`,
 							padding: 2,
-						}
+						},
 					})}
 				>
 					<Stack
