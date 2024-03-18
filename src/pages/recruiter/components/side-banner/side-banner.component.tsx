@@ -5,47 +5,46 @@ import { FC } from 'react';
 
 export const SideBanner: FC = () => {
 	const isMobile = useMediaQuery<Theme>((theme) =>
-		theme.breakpoints.down('lg')
+		theme.breakpoints.down('md')
 	);
 
 	return (
 		<Stack
+			width='100%'
+			bgcolor='background.paper'
 			direction={isMobile ? 'column' : 'row'}
-			justifyItems="space-between"
-			gap={6}
-			sx={(theme) => ({
-				backgroundColor: theme.palette.common.white,
-				p: 3,
-				borderRadius: 2,
-				maxWidth: '1344px',
-				width: '100%',
-				alignSelf: 'center',
-			})}
+			justifyContent="space-between"
+			py={[6, 8]}
+			px={[6, 3]}
+			gap={[6, 4]}
 		>
-			<Stack flex="1" justifyContent="space-between">
-				<Stack gap={isMobile ? 3 : 6}>
+			<Stack width={['100%', '100%', '50%']} justifyContent="space-between">
+				<Stack>
 					<Typography variant={isMobile ? 'h2' : 'h1'}>
 						Transforme agora mesmo sua rotina de RH
 					</Typography>
-					<Typography variant={isMobile ? 'h3' : 'h2'} fontWeight={400}>
+
+					<Typography variant={isMobile ? 'h3' : 'h2'} fontWeight={400} mt={[ 6, 4 ]}>
 						Junte-se a milhares de parceiros e revolucione a maneira de atrair,
 						selecionar e qualificar talentos.
 					</Typography>
 				</Stack>
+
 				{!isMobile ? <PlansButtons /> : null}
 			</Stack>
-			<Stack gap={6}>
+
+			<Stack width={['100%', '100%', '50%']} gap={6}>
 				<Box
 					component="img"
 					src={interview}
-					sx={(theme) => ({
-						flex: '1',
+					sx={{
+						maxHeight: [316, 600],
 						borderRadius: 2,
-						[theme.breakpoints.up('lg')]: {
-							maxWidth: '500px',
-						},
-					})}
+						objectFit: 'cover',
+						objectPosition: 'top'
+					}}
 				/>
+
 				{isMobile ? <PlansButtons vertical /> : null}
 			</Stack>
 		</Stack>

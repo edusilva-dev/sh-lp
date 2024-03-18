@@ -6,8 +6,8 @@ export type PlansButtonsProps = {
 };
 
 export const PlansButtons: FC<PlansButtonsProps> = ({ vertical }) => (
-	<Stack gap={3} direction={vertical ? 'column' : 'row'}>
-		<Button variant="contained">Conheça os planos</Button>
-		<Button variant="outlined">Solicitar demonstração</Button>
+	<Stack gap={[2, 4]} direction={vertical ? 'column' : 'row'} width='100%'>
+		<Button variant="contained" sx={{ width: vertical ? '100%' : '50%' }}>Conheça os planos</Button>
+		<Button variant="outlined" sx={{ width: vertical ? '100%' : '50%' }}>Solicitar demonstração</Button>
 	</Stack>
 );
