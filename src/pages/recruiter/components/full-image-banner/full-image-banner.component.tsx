@@ -12,7 +12,7 @@ export const FullImageBanner: FC = () => {
 	);
 
 	return (
-		<Container>
+		<Container bgcolor='background.paper'>
 			<Stack alignItems="center">
 				<Stack
 					sx={(theme) => ({
