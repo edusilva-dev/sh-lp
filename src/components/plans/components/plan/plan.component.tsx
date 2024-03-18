@@ -2,7 +2,6 @@ import { RoundGradientButton } from '@/components/round-gradient-button';
 import {
 	Box,
 	Button,
-	List,
 	Stack,
 	Theme,
 	Typography,
