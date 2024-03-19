@@ -4,7 +4,7 @@ import { PlansButtons } from '@/components/plans-buttons/plans-buttons.component
 import { Stack, Theme, Typography, useMediaQuery } from '@mui/material';
 
 import RhBannerMobile from '@/assets/images/rh-banner-mobile.png';
-import RhBanner from '@/assets/images/rh-banner.png';
+import RhBanner from '@/assets/images/rh-banner.jpg';
 
 export const FullImageBanner: FC = () => {
 	const isMobile = useMediaQuery<Theme>((theme) =>

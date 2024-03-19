@@ -1,7 +1,7 @@
 import reviewPhoto1 from '@/assets/images/review-photo-1.png';
 import reviewPhoto2 from '@/assets/images/review-photo-2.png';
 import reviewPhoto3 from '@/assets/images/review-photo-3.png';
-import reviewsBannerPhoto from '@/assets/images/reviews-banner-image.png';
+import reviewsBannerPhoto from '@/assets/images/reviews-banner-image.webp';
 import { CardsCarousel, Review } from '@/components/cards-carousel';
 import { PrimaryLightContainer } from '@/components/primary-light-container';
 import { SignInButtons } from '@/components/sign-in-buttons';
@@ -100,6 +100,7 @@ export const ReviewsBanner: FC = () => {
 								height: ['272px', '372px', '472px', '600px'],
 								borderRadius: 2,
 								objectFit: 'cover',
+								transform: 'scaleX(-1)'
 							}}
 						/>
 

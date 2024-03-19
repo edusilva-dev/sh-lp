@@ -1,4 +1,4 @@
-import CandidateBanner from '@/assets/images/candidate-banner-2.png';
+import CandidateBanner from '@/assets/images/candidate-banner-2.jpg';
 import { Container } from '@/components/container';
 import {
 	Button,
@@ -27,10 +27,25 @@ export const SignInBanner: FC = () => {
 						borderRadius: 2,
 						padding: 6,
 						overflow: 'hidden',
-						backgroundImage: `url(${CandidateBanner})`,
+						['&::before']: {
+							content: '\'\'',
+							position: 'absolute',
+							top: 0, 
+							left: 0,
+							width: '100%', 
+							height: '100%',
+							backgroundImage: `url(${CandidateBanner})`,
+							backgroundRepeat: 'no-repeat',
+							backgroundSize: 'cover',
+							backgroundPosition: 'center',
+							transform: 'scaleX(-1)',
+						},
 						[theme.breakpoints.down('sm')]: {
-							backgroundPositionX: '-300px',
-							backgroundPositionY: '-120px',
+							height: '480px',
+							['&::before']: {
+								backgroundPositionX: '-120px',
+								backgroundPositionY: '-120px',
+							},
 							padding: 2,
 							'::after': {
 								position: 'absolute',
@@ -43,9 +58,6 @@ export const SignInBanner: FC = () => {
 									'linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0))',
 								zIndex: 0,
 							},
-						},
-						[theme.breakpoints.up('sm')]: {
-							backgroundPosition: '100px',
 						},
 					})}
 				>

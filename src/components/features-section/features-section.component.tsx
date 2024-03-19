@@ -24,9 +24,20 @@ export const FeaturesSection: FC = () => {
 			</Typography>
 
 			{isMobile ? (
-				<Box component="img" src={macProPathMobile} className="mobile" maxWidth={[ '600px', '500px' ]} marginLeft={'-150px'} />
+				<Box 
+					component="img"
+					src={macProPathMobile}
+					className="mobile"
+					maxWidth={[ '600px', '500px' ]}
+					marginLeft={'-150px'} 
+				/>
 			) : (
-				<Box component="img" src={macProPathDesktop} className="desktop" maxWidth={[ '600px', '600px', '500px', '700px' ]} />
+				<Box 
+					component="img"
+					src={macProPathDesktop}
+					className="desktop"
+					maxWidth={[ '600px', '600px', '500px', '800px' ]}
+				/>
 			)}
 
 			<Grid
@@ -34,13 +45,13 @@ export const FeaturesSection: FC = () => {
 				rowSpacing={4}
 				mt={[5, 5, 14]}
 				sx={{
-					width: ['80vw', '60%'],
+					width: ['80vw', '100%', '60%'],
 					zIndex: 100,
 					position: 'relative',
 				}}
 			>
 				{FEATURES.map((feature, index) => (
-					<Grid item key={index} md={6}>
+					<Grid item key={index} xs={12} sm={6} md={6} lg={6}>
 						<Feature description={feature.description} icon={feature.icon} />
 					</Grid>
 				))}

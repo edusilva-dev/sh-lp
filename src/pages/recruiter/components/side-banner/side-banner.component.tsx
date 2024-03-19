@@ -1,4 +1,4 @@
-import interview from '@/assets/images/interview.png';
+import interview from '@/assets/images/interview.jpg';
 import { PlansButtons } from '@/components/plans-buttons/plans-buttons.component';
 import { Box, Stack, Theme, Typography, useMediaQuery } from '@mui/material';
 import { FC } from 'react';
@@ -38,10 +38,10 @@ export const SideBanner: FC = () => {
 					component="img"
 					src={interview}
 					sx={{
-						maxHeight: [316, 600],
+						maxHeight: [316, 400, 600],
 						borderRadius: 2,
 						objectFit: 'cover',
-						objectPosition: 'top'
+						objectPosition: 'top right'
 					}}
 				/>
 
