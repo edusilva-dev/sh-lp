@@ -13,7 +13,7 @@ export const Highlight: FC = () => {
 			direction={isMobile ? 'column' : 'row'}
 			alignItems="center"
 			justifyContent="center"
-			gap="150px"
+			gap={['unset', '150px']}
 			paddingLeft={[3, 12]}
 			height={`calc(100dvh - ${HEADER.height.mobile}px)`}
 			bgcolor="primary.main"
@@ -49,7 +49,7 @@ export const Highlight: FC = () => {
 				</Typography>
 			</Stack>
 			<Box
-				sx={{
+				sx={(theme) => ({
 					backgroundImage: `url(${highlight})`,
 					backgroundSize: '300px 300px',
 					backgroundRepeat: 'no-repeat',
@@ -77,7 +77,12 @@ export const Highlight: FC = () => {
 						background:
 							'radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 52.15%, rgba(255, 255, 255, 0.1) 100%)',
 					},
-				}}
+					[theme.breakpoints.down('sm')]: {
+						'@media (min-height: 800px)': {
+							top: '-20px',
+						},
+					},
+				})}
 			/>
 		</Stack>
 	);
