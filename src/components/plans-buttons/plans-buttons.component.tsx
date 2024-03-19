@@ -8,7 +8,7 @@ export type PlansButtonsProps = {
 };
 
 export const PlansButtons: FC<PlansButtonsProps> = ({ vertical, gradientBgColor }) => (
-	<Stack gap={[2, 4]} direction={vertical ? 'column' : 'row-reverse'} width='100%'>
+	<Stack gap={[2, vertical ? 3 : 4]} direction={vertical ? 'column' : 'row-reverse'} width='100%'>
 		<Button variant="contained" sx={{ width: vertical ? '100%' : '50%' }}>Conheça os planos</Button>
 		<RoundGradientButton 
 			width={ vertical ? '100%' : '50%' }
