@@ -10,11 +10,11 @@ export const Highlight: FC = () => {
 
 	return (
 		<Stack
-			direction="row"
+			direction={isMobile ? 'column' : 'row'}
 			alignItems="center"
 			justifyContent="center"
 			gap="150px"
-			paddingX={12}
+			paddingLeft={[3, 12]}
 			height={`calc(100dvh - ${HEADER.height.mobile}px)`}
 			bgcolor="primary.main"
 		>
@@ -51,7 +51,8 @@ export const Highlight: FC = () => {
 			<Box
 				sx={{
 					backgroundImage: `url(${highlight})`,
-					backgroundSize: 'contain',
+					backgroundSize: '300px 300px',
+					backgroundRepeat: 'no-repeat',
 					position: 'relative',
 					width: '300px',
 					height: '300px',
