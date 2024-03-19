@@ -1,8 +1,7 @@
-import highlight from '@/assets/images/highlight.png';
-import mobileHighlight from '@/assets/images/mobile-highlight.png';
-import { Stack, Theme, Typography, useMediaQuery } from '@mui/material';
+import { Box, Stack, Theme, Typography, useMediaQuery } from '@mui/material';
 import { FC } from 'react';
 import { HEADER } from '../header/header.constants';
+import highlight from '@/assets/images/highlight.png';
 
 export const Highlight: FC = () => {
 	const isMobile = useMediaQuery<Theme>((theme) =>
@@ -11,23 +10,13 @@ export const Highlight: FC = () => {
 
 	return (
 		<Stack
+			direction="row"
+			alignItems="center"
+			justifyContent="center"
+			gap="150px"
+			paddingX={12}
 			height={`calc(100dvh - ${HEADER.height.mobile}px)`}
 			bgcolor="primary.main"
-			sx={(theme) => ({
-				[theme.breakpoints.down('sm')]: {
-					paddingX: 3,
-					background: `url(${mobileHighlight}), ${theme.palette.primary.main}`,
-					backgroundSize: 'cover',
-					backgroundRepeat: 'no-repeat',
-				},
-				[theme.breakpoints.up('sm')]: {
-					paddingX: 12,
-					background: `url(${highlight}), ${theme.palette.primary.main}`,
-					backgroundSize: 'auto 120%',
-					backgroundPositionX: 'right',
-					backgroundRepeat: 'no-repeat',
-				},
-			})}
 		>
 			<Stack
 				sx={(theme) => ({
@@ -59,6 +48,36 @@ export const Highlight: FC = () => {
 					recrutadores e candidatos qualificados
 				</Typography>
 			</Stack>
+			<Box
+				sx={{
+					backgroundImage: `url(${highlight})`,
+					backgroundSize: 'contain',
+					position: 'relative',
+					width: '300px',
+					height: '300px',
+					'&:after, &:before': {
+						position: 'absolute',
+						borderRadius: '100%',
+						content: '""',
+					},
+					'&:after': {
+						top: '-150px',
+						left: '-150px',
+						width: '600px',
+						height: '600px',
+						background:
+							'radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 52.15%, rgba(255, 255, 255, 0.15) 100%)',
+					},
+					'&:before': {
+						top: '-450px',
+						left: '-450px',
+						width: '1200px',
+						height: '1200px',
+						background:
+							'radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 52.15%, rgba(255, 255, 255, 0.1) 100%)',
+					},
+				}}
+			/>
 		</Stack>
 	);
 };
