@@ -30,7 +30,7 @@ export const SideBanner: FC = () => {
 					</Typography>
 				</Stack>
 
-				{!isMobile ? <PlansButtons /> : null}
+				{!isMobile ? <PlansButtons gradientBgColor='#F3F5F7' /> : null}
 			</Stack>
 
 			<Stack width={['100%', '100%', '50%']} gap={6}>
@@ -45,7 +45,7 @@ export const SideBanner: FC = () => {
 					}}
 				/>
 
-				{isMobile ? <PlansButtons vertical /> : null}
+				{isMobile ? <PlansButtons vertical gradientBgColor='#F3F5F7' /> : null}
 			</Stack>
 		</Stack>
 	);

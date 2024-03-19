@@ -1,4 +1,5 @@
 import { Container } from '@/components/container';
+import { RoundGradientButton } from '@/components/round-gradient-button';
 import { Button, Stack, Theme, Typography, useMediaQuery } from '@mui/material';
 import { FC } from 'react';
 
@@ -27,14 +28,9 @@ export const SignInSection: FC = () => {
 						width: '100%',
 					})}
 				>
-					<Button
-						sx={(theme) => ({
-							[theme.breakpoints.down('lg')]: { width: '100%' },
-						})}
-						variant="outlined"
-					>
+					<RoundGradientButton width={'100%'}>
 						Solicitar demonstração
-					</Button>
+					</RoundGradientButton>
 					
 					<Button
 						sx={(theme) => ({

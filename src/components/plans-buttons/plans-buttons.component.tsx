@@ -1,13 +1,20 @@
 import { Button, Stack } from '@mui/material';
 import { FC } from 'react';
+import { RoundGradientButton } from '../round-gradient-button';
 
 export type PlansButtonsProps = {
 	vertical?: boolean;
+	gradientBgColor?: string;
 };
 
-export const PlansButtons: FC<PlansButtonsProps> = ({ vertical }) => (
+export const PlansButtons: FC<PlansButtonsProps> = ({ vertical, gradientBgColor }) => (
 	<Stack gap={[2, 4]} direction={vertical ? 'column' : 'row-reverse'} width='100%'>
 		<Button variant="contained" sx={{ width: vertical ? '100%' : '50%' }}>Conheça os planos</Button>
-		<Button variant="outlined" sx={{ width: vertical ? '100%' : '50%' }}>Solicitar demonstração</Button>
+		<RoundGradientButton 
+			width={ vertical ? '100%' : '50%' }
+			bgColor={gradientBgColor}
+		>
+			Solicitar demonstração
+		</RoundGradientButton>
 	</Stack>
 );

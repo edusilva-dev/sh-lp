@@ -7,6 +7,7 @@ import {
 } from './recruiter-banner.styles';
 import bannerPath from '@/assets/images/first-banner.png';
 import { Box, Theme, Typography, useMediaQuery } from '@mui/material';
+import { RoundGradientButton } from '../round-gradient-button';
 
 export const RecruiterBanner: FC = () => {
 	const isMobile = useMediaQuery<Theme>((theme) =>
@@ -30,7 +31,7 @@ export const RecruiterBanner: FC = () => {
 				<ButtonsContainer mt={[3, 3]}>
 					<Button variant='contained'>Conheça os planos</Button>
 
-					<Button variant='outlined'>Solicitar demonstração</Button>
+					<RoundGradientButton width={'100%'} bgColor='#F3F5F7'>Solicitar demonstração</RoundGradientButton>
 				</ButtonsContainer>
 			</ContentContainer>
 

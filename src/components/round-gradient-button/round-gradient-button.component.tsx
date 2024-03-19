@@ -1,7 +1,12 @@
 import { Button, Stack } from '@mui/material';
 import { FC, HTMLProps } from 'react';
 
-export const RoundGradientButton: FC<HTMLProps<HTMLButtonElement>> = (
+type RoundGradientButtonProps = {
+	width?: string | number | string[] | number[]
+	bgColor?: string
+}
+
+export const RoundGradientButton: FC<HTMLProps<HTMLButtonElement> & RoundGradientButtonProps> = (
 	props
 ) => (
 	<Stack
@@ -10,16 +15,19 @@ export const RoundGradientButton: FC<HTMLProps<HTMLButtonElement>> = (
 		sx={(theme) => ({
 			cursor: 'pointer',
 			borderRadius: theme.shape.borderRadius,
-			height: '44px',
+			height: '42px',
 			padding: '2px',
 			background: 'linear-gradient(90deg, #B694FF 0%, #4402FF 100%)',
 		})}
+		{...(props.width && ({
+			width: props.width
+		}))}
 	>
 		<Button
 			sx={{
-				backgroundColor: '#FFFFFF !important',
+				backgroundColor: `${props.bgColor || '#FFF'} !important`,
 				width: '100%',
-				height: '40px',
+				height: '38px',
 			}}
 			variant="contained"
 			color="secondary"
