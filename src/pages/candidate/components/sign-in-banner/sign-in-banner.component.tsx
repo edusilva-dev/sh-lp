@@ -23,16 +23,15 @@ export const SignInBanner: FC = () => {
 						position: 'relative',
 						height: '480px',
 						width: '100%',
-						backgroundSize: 'cover',
 						borderRadius: 2,
 						padding: 6,
 						overflow: 'hidden',
 						['&::before']: {
-							content: '\'\'',
+							content: '""',
 							position: 'absolute',
-							top: 0, 
+							top: 0,
 							left: 0,
-							width: '100%', 
+							width: '100%',
 							height: '100%',
 							backgroundImage: `url(${CandidateBanner})`,
 							backgroundRepeat: 'no-repeat',
@@ -41,10 +40,11 @@ export const SignInBanner: FC = () => {
 							transform: 'scaleX(-1)',
 						},
 						[theme.breakpoints.down('sm')]: {
-							height: '480px',
+							height: '520px',
 							['&::before']: {
-								backgroundPositionX: '-120px',
-								backgroundPositionY: '-120px',
+								backgroundPositionX: '-85px',
+								backgroundPositionY: '-65px',
+								height: '70%',
 							},
 							padding: 2,
 							'::after': {
@@ -55,7 +55,7 @@ export const SignInBanner: FC = () => {
 								height: '60%',
 								width: '100%',
 								backgroundImage:
-									'linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0))',
+									'linear-gradient(to top, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0))',
 								zIndex: 0,
 							},
 						},

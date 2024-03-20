@@ -16,12 +16,16 @@ export const CandidateBanner: FC = () => {
 		theme.breakpoints.down('md')
 	);
 
+	const isDownLg = useMediaQuery<Theme>((theme) =>
+		theme.breakpoints.down('lg')
+	);
+
 	return (
 		<PrimaryLightContainer>
 			<Stack
 				direction={['column', 'row']}
 				justifyContent="space-between"
-				gap={[ 3, 6 ]}
+				gap={[3, 6]}
 			>
 				<Stack width={['100%', '50%']}>
 					<Box
@@ -31,32 +35,32 @@ export const CandidateBanner: FC = () => {
 							height: ['345px', '600px'],
 							borderRadius: 2,
 							objectFit: 'cover',
-							objectPosition: 'bottom'
+							objectPosition: 'bottom',
 						}}
 					/>
 				</Stack>
 
-				<Stack width={['100%', '50%']} justifyContent='space-between'>
+				<Stack gap={6} width={['100%', '50%']} justifyContent="space-between">
 					<Stack gap={3}>
-						<Stack width='100%'>
+						<Stack width="100%">
 							<Typography
-								variant={isMobile ? 'h2' : 'h1'}
+								variant={isDownLg ? 'h2' : 'h1'}
 								color="secondary.main"
 							>
 								Adeus seleções intermináveis.
 							</Typography>
-							
+
 							<Typography
-								variant={isMobile ? 'h2' : 'h1'}
+								variant={isDownLg ? 'h2' : 'h1'}
 								fontWeight={400}
 								color="secondary.main"
 							>
 								Olá, processos transparentes.
 							</Typography>
 						</Stack>
-						
+
 						<Typography
-							variant={isMobile ? 'body1' : 'h3'}
+							variant={isDownLg ? 'body1' : 'h3'}
 							color="secondary.main"
 						>
 							Com a Skill Hunter, você encontra as melhores oportunidades do
@@ -65,7 +69,7 @@ export const CandidateBanner: FC = () => {
 						</Typography>
 					</Stack>
 
-					<Stack mt={[6, 6, 14]}>
+					<Stack>
 						<Typography variant="h3" color="secondary.main">
 							Na Skill Hunter, você:
 						</Typography>
@@ -89,16 +93,24 @@ export const CandidateBanner: FC = () => {
 									Tem acesso a oportunidades em grandes players do mercado
 								</Typography>
 							</Box>
-							
+
 							<Box component="li">
 								<Typography fontWeight={400} color="secondary.main">
 									Economiza até <b>50% do tempo*</b> ao aplicar para uma posição
 								</Typography>
 							</Box>
 						</Stack>
-						
-						<Stack direction={['column', 'column', 'row']} gap={3} alignItems="center">
-							<Button color="secondary" variant="contained" sx={{ width: isMobile ? '100%' : 'unset' }}>
+
+						<Stack
+							direction={['column', 'column', 'row']}
+							gap={3}
+							alignItems="center"
+						>
+							<Button
+								color="secondary"
+								variant="contained"
+								sx={{ width: isMobile ? '100%' : 'unset' }}
+							>
 								Cadastre-se
 							</Button>
 
