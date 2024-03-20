@@ -1,12 +1,13 @@
-import { Button, Stack } from '@mui/material';
-import { FC, HTMLProps } from 'react';
+import { Button, ButtonProps, Stack } from '@mui/material';
+import { FC } from 'react';
 
 type RoundGradientButtonProps = {
+	width: string | number | string[] | number[]
 	bgColor?: string
 }
 
-export const RoundGradientButton: FC<HTMLProps<HTMLButtonElement> & RoundGradientButtonProps> = (
-	props
+export const RoundGradientButton: FC<ButtonProps & RoundGradientButtonProps> = (
+	{ ...props }
 ) => (
 	<Stack
 		alignItems="center"
