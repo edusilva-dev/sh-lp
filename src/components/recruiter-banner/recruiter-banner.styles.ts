@@ -1,5 +1,4 @@
 import { Button as BaseButton, styled, Stack } from '@mui/material';
-import { RoundGradientButton } from '../round-gradient-button';
 
 export const RecruiterBannerContainer = styled(Stack)(({ theme }) => ({
 	width: `calc(100% - (${theme.spacing(3)} * 2))`,

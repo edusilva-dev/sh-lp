@@ -2,12 +2,12 @@ import { Button, ButtonProps, Stack } from '@mui/material';
 import { FC } from 'react';
 
 type RoundGradientButtonProps = {
-	width: string | number | string[] | number[]
+	width?: string | number | string[] | number[]
 	bgColor?: string
 }
 
 export const RoundGradientButton: FC<ButtonProps & RoundGradientButtonProps> = (
-	{ ...props }
+	{ bgColor, ...props }
 ) => (
 	<Stack
 		alignItems="center"
@@ -25,7 +25,7 @@ export const RoundGradientButton: FC<ButtonProps & RoundGradientButtonProps> = (
 	>
 		<Button
 			sx={{
-				backgroundColor: `${props.bgColor || '#FFF'} !important`,
+				backgroundColor: `${bgColor || '#FFF'} !important`,
 				width: '100%',
 				height: '38px',
 			}}
