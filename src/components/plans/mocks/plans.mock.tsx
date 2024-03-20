@@ -1,7 +1,10 @@
 import { Typography } from '@mui/material';
 import { Fragment } from 'react/jsx-runtime';
 
-const baseUrl = 'src/assets/images/plans';
+import freePlanSVG from '@/assets/images/plans/free-plan.svg';
+import essencialsPlanSVG from '@/assets/images/plans/essencials-plan.svg';
+import premiumPlanSVG from '@/assets/images/plans/premium-plan.svg';
+import customPlanSVG from '@/assets/images/plans/custom-plan.svg';
 
 export const PLANS = [
 	{
@@ -21,7 +24,7 @@ export const PLANS = [
 				recursos básicos de forma gratuita.
 			</Fragment>
 		),
-		imageSrc: `${baseUrl}/free-plan.svg`,
+		imageSrc: freePlanSVG,
 		options: [
 			'Base de talentos da Skill Hunter',
 			'Pacotes de desbloqueio disponíveis',
@@ -47,7 +50,7 @@ export const PLANS = [
 				funcionalidades adicionais que potencializam seu uso na plataforma.
 			</Fragment>
 		),
-		imageSrc: `${baseUrl}/essencials-plan.svg`,
+		imageSrc: essencialsPlanSVG,
 		options: ['15 desbloqueios mensais', 'Criação de desafios'],
 		price: 40,
 		bgColor: '#4402FF80',
@@ -71,7 +74,7 @@ export const PLANS = [
 				máximo nossa plataforma.
 			</Fragment>
 		),
-		imageSrc: `${baseUrl}/premium-plan.svg`,
+		imageSrc: premiumPlanSVG,
 		options: [
 			'Desbloqueios ilimitados',
 			'Criação de desafios',
@@ -100,7 +103,7 @@ export const PLANS = [
 				experiência sob medida para sua empresa.
 			</Fragment>
 		),
-		imageSrc: `${baseUrl}/custom-plan.svg`,
+		imageSrc: customPlanSVG,
 		options: ['Personalize seu plano e crie sua experiência ideal!'],
 		price: 999,
 		bgColor: '#4402FF',

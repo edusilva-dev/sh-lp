@@ -24,6 +24,7 @@ export const Plans: FC = () => {
 			<Typography variant={isMobile ? 'h2' : 'h1'}>
 				Conheça os planos
 			</Typography>
+
 			<Stack gap={6}>
 				<Stack {...(isTablet && { ref: emblaRef })}>
 					<PlansContainer mt={6}>
@@ -32,6 +33,7 @@ export const Plans: FC = () => {
 						))}
 					</PlansContainer>
 				</Stack>
+				
 				{isTablet ? (
 					<Stack direction="row" alignItems="center" justifyContent="center">
 						<CarouselControllers
