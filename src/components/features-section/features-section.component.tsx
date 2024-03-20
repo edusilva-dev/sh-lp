@@ -28,8 +28,9 @@ export const FeaturesSection: FC = () => {
 					component="img"
 					src={macProPathMobile}
 					className="mobile"
-					maxWidth={[ '600px', '500px' ]}
-					marginLeft={'-150px'} 
+					maxWidth={[ '800px', '700px' ]}
+					marginTop={'-100px'}
+					marginLeft={'-260px'} 
 				/>
 			) : (
 				<Box 

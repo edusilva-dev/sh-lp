@@ -59,7 +59,7 @@ export const CardsCarousel: FC<CardsCarouselProps> = ({ reviews }) => {
 								<Stack direction={isMobile ? 'column' : 'row'} gap={3}>
 									<Avatar
 										src={review.photo}
-										sx={{ width: '32px', height: '32px' }}
+										sx={{ width: ['32px', '48px'], height: ['32px', '48px'] }}
 									/>
 									<Stack>
 										<Typography>{review.name}</Typography>

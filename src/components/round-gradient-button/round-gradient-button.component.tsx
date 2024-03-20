@@ -2,7 +2,6 @@ import { Button, Stack } from '@mui/material';
 import { FC, HTMLProps } from 'react';
 
 type RoundGradientButtonProps = {
-	width?: string | number | string[] | number[]
 	bgColor?: string
 }
 

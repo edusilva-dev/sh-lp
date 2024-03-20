@@ -32,7 +32,7 @@ export const HighlightCard: FC<{ isMobile: boolean }> = ({ isMobile }) => {
 						variant="contained"
 					>
 						<Typography variant={isMobile ? 'body2' : 'body1'}>
-              Gerar job description.
+              Me conte sobre sua experiência.
 						</Typography>
 					</Button>
 				</Stack>

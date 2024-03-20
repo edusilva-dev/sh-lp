@@ -6,10 +6,6 @@ export const SectionContainer = styled(Container)(({ theme }) => ({
 
 	position: 'relative',
 
-	['& img.mobile']: {
-		width: '135%',
-	},
-
 	['& img.desktop']: {
 		top: 0,
 		width: '50%',

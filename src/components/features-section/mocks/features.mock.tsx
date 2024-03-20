@@ -1,16 +1,16 @@
-import { FaLinkedinIn as LinkedinIcon } from 'react-icons/fa6';
-import { GoGoal as GoalIcon } from 'react-icons/go';
+import PeopleIcon from '@/assets/icons/talents.svg?react';
+import TargetIcon from '@/assets/icons/target.svg?react';
 import { IoIosStar as StarIcon } from 'react-icons/io';
-import { IoPeople as PeopleIcon } from 'react-icons/io5';
+import { FaLinkedinIn as LinkedinIcon } from 'react-icons/fa6';
 
 export const FEATURES = [
 	{
 		description: 'Processo integrado de R&S',
-		icon: <PeopleIcon size={40} color={'#fff'} />
+		icon: <PeopleIcon color={'#fff'} />
 	},
 	{
 		description: 'Desafios personalizados',
-		icon: <GoalIcon size={40} color={'#fff'} />
+		icon: <TargetIcon color={'#fff'} />
 	},
 	{
 		description: 'Veja os candidatos mais qualificados',

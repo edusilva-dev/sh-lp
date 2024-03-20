@@ -31,7 +31,7 @@ export const RecruiterBanner: FC = () => {
 				<ButtonsContainer mt={[3, 3]}>
 					<Button variant='contained'>Conheça os planos</Button>
 
-					<RoundGradientButton width={'100%'} bgColor='#F3F5F7'>Solicitar demonstração</RoundGradientButton>
+					<RoundGradientButton width={['100%', '100%', '100%', '50%']} bgColor='#F3F5F7'>Solicitar demonstração</RoundGradientButton>
 				</ButtonsContainer>
 			</ContentContainer>
 
